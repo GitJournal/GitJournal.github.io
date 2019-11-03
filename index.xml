@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitJournal</title>
+    <link>https://gitjournal.io/</link>
+    <description>Recent content on GitJournal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://gitjournal.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://gitjournal.io/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/privacy/</guid>
+      <description>GitJournal (&amp;ldquo;us&amp;rdquo;, &amp;ldquo;we&amp;rdquo;, or &amp;ldquo;our&amp;rdquo;) operates the GitJournal mobile application (the &amp;ldquo;Service&amp;rdquo;).
+This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
+We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy.</description>
+    </item>
+    
+    <item>
+      <title>Support</title>
+      <link>https://gitjournal.io/support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/support/</guid>
+      <description>Please email support@gitjournal.io for support</description>
+    </item>
+    
+  </channel>
+</rss>
