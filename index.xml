@@ -11,13 +11,14 @@
     
     
     <item>
-      <title>About Us</title>
-      <link>https://gitjournal.io/about-us/</link>
+      <title>About Me</title>
+      <link>https://gitjournal.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://gitjournal.io/about-us/</guid>
-      <description>We&amp;rsquo;re a small company based in Barcelona, Spain; who care a lot about Privacy, Data Portability and making Self-Hosting more accessible.
- Drop us an email at hello@gitjournal.io</description>
+      <guid>https://gitjournal.io/about/</guid>
+      <description>Hi! My name is Vishesh.
+I&amp;rsquo;m the founder of GitJournal. I&amp;rsquo;ve been writing open source software for over a decade, and care a lot about data privacy and making it more accessible to the rest of the world.
+Long before I started GitJournal, I had already started keeping my notes and journal entries in plain text or markdown files. It&amp;rsquo;s a simple universal format that works with lots of different editors - both on the desktop and on mobile.</description>
     </item>
     
     <item>
