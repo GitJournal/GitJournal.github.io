@@ -24,7 +24,7 @@ if (!doNotTrack) {
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
 <link rel="manifest" href="/images/favicon/site.webmanifest">
 <link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/css/style.min.971bf5a28353183468c93a13d59048586ca007c85df30f1c4983eda7d6b4b4e4.css" integrity="sha256-lxv1ooNTGDRoyToT1ZBIWGygB8hd8w8cSYPtp9a0tOQ=">
+<link rel="stylesheet" type="text/css" href="/css/style.min.fa81ffc7f251aebbaa11cc29cfa1ddb36ca188f39661fa1756cf4d0d38684701.css" integrity="sha256-&#43;oH/x/JRrruqEcwpz6Hds2yhiPOWYfoXVs9NDThoRwE=">
 <link rel="stylesheet" type="text/css" href="/css/icons.css">
 
   </head>
@@ -36,6 +36,7 @@ if (!doNotTrack) {
 
     
 
+    
 
 <nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
   <div class="container">
@@ -63,50 +64,71 @@ if (!doNotTrack) {
           <a href="/contribute" class="navbar-item is-secondary">
             Contribute
           </a>
-          <a href="/about" class="navbar-item is-secondary">
-            About
+          <a href="/about-us" class="navbar-item is-secondary">
+            About Us
           </a>
         </div>
       </div>
   </div>
 </nav>
 
+
+
+<nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/logo.svg" alt="" width="112" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="cloned-navbar-menu" class="navbar-menu is-fixed">
+
+      <div class="navbar-end">
+        <a href="/privacy" class="navbar-item is-secondary">
+          Privacy
+        </a>
+        <a href="/support" class="navbar-item is-secondary">
+          Support
+        </a>
+        <a href="/contribute" class="navbar-item is-secondary">
+          Contribute
+        </a>
+        <a href="/about-us" class="navbar-item is-secondary">
+          About Us
+        </a>
+      </div>
+    </div>
+</div>
+</nav>
+
 <section class="section is-medium">
   <div class="container content">
     <div class="columns">
       <div class="column is-centered-tablet-portrait">
-        <h1 class="title section-title">Support</h1>
+        <h1 class="title section-title">About Us</h1>
         <h5 class="subtitle is-5 is-muted"></h5>
+        <div class="divider"></div>
       </div>
     </div>
-    
+    <p>We&rsquo;re a small company based in Barcelona, Spain; who care a lot about Privacy, Data Portability and making Self-Hosting more accessible.</p>
 
-<p>Please email me at <a href="mailto:support@gitjournal.io">support@gitjournal.io</a> for any questions.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95777.5288157847!2d2.0787279470992464!3d41.39476881460054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816718e30e5%3A0x44b0fb3d4f47660a!2sBarcelona!5e0!3m2!1sen!2ses!4v1577618642139!5m2!1sen!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
-<h2 id="faq">FAQ</h2>
-
-<h3 id="how-do-you-plan-to-sustain-this-project">How do you plan to sustain this project?</h3>
-
-<p>Sustaining an Open Source Project can be challenging in the long term. The idea with GitJournal is to be a 100% Open Source Project - No Open Core model. Here are my current ideas on how to sustain this in the long term -</p>
-
-<ol>
-<li><p><strong>Paid Pro Version</strong> - Some Advanced features could require payment. The source code for these features would still be available here, and users are free to install a version with all the features unlocked - but the versions on Google Play Store and iOS would require payment.</p></li>
-
-<li><p><strong>Encrypted Git Hosting</strong> - Another idea was to provide paid end-to-end encrypted Git Hosting which could be used to store the notes.</p></li>
-</ol>
-
-<p>I&rsquo;m open to suggestions on how to sustain GitJournal. Send me an email with your thoughts at <a href="mailto:hello@gitjournal.io">hello@gitjournal.io</a> or comment publicly on <a href="https://github.com/GitJournal/GitJournal/issues/49">Github</a></p>
-
-<h3 id="does-gitjournal-work-with-ssh-on-a-custom-port">Does GitJournal work with SSH on a custom port?</h3>
-
-<p>Yes. Please specify the full url with the ssh protocol. Eg - <code>ssh://user@host.com:PORT/path/to/repo/journal.git</code></p>
+<p>Drop us an email at <a href="mailto:hello@gitjournal.io">hello@gitjournal.io</a></p>
 
   </div>
 </section>
 
 
 
-
+    
 <footer class="footer footer-dark">
   <div class="container">
     <div class="columns">
@@ -143,13 +165,12 @@ if (!doNotTrack) {
 </footer>
 
 
-
-<div id="backtotop"><a href="#"></a></div>
-
-
-
     
     <div id="backtotop"><a href="#"></a></div>
+
+    
+
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://unpkg.com/feather-icons"></script>
