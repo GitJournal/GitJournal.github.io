@@ -54,5 +54,14 @@ FAQ How do you plan to sustain this project? Sustaining an Open Source Project c
  Paid Pro Version - Some Advanced features could require payment.</description>
     </item>
     
+    <item>
+      <title>Terms and Conditions</title>
+      <link>https://gitjournal.io/terms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/terms/</guid>
+      <description>By downloading or using the app, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app. You’re not allowed to copy, or modify the app, any part of the app, but not our trademarks in any way. The app itself, and all the trade marks, copyright, database rights and other intellectual property rights related to it, still belong to Vishesh Handa.</description>
+    </item>
+    
   </channel>
 </rss>
