@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://gitjournal.io/blog/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gitjournal.io/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gitjournal.io/blog/2020/06/12/gitjournal-may-update/</loc>
+    <lastmod>2020-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gitjournal.io/about/</loc>
   </url>
   
@@ -11,7 +26,7 @@
   </url>
   
   <url>
-    <loc>https://gitjournal.io/</loc>
+    <loc>https://gitjournal.io/apple_eula/</loc>
   </url>
   
   <url>

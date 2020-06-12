@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on GitJournal</title>
+    <link>https://gitjournal.io/blog/</link>
+    <description>Recent content in Blogs on GitJournal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://gitjournal.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GitJournal May Update</title>
+      <link>https://gitjournal.io/blog/2020/06/12/gitjournal-may-update/</link>
+      <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/blog/2020/06/12/gitjournal-may-update/</guid>
+      <description>GitJournal is a mobile first note taking application integrated with Git. It’s based on the idea that you should have control over your data, and that we all multiple devices in our daily lives, and therefore need to be in control of the mechanism to synchronize our notes across these devices.
+Git was chosen as the method to do so, as there are already many commercial provides of Git, and setting up your own Git Server has a much lower barrier to entry than any other setup.</description>
+    </item>
+    
+  </channel>
+</rss>

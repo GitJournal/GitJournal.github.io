@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-132430504-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>GitJournal</title>
+    
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/images/favicon/site.webmanifest">
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.min.971bf5a28353183468c93a13d59048586ca007c85df30f1c4983eda7d6b4b4e4.css" integrity="sha256-lxv1ooNTGDRoyToT1ZBIWGygB8hd8w8cSYPtp9a0tOQ=">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+  </head>
+  <body>
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+
+
+<nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/logo.svg" alt="" width="112" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+      <div id="navbar-menu" class="navbar-menu is-static">
+
+        <div class="navbar-end">
+          <a href="/privacy" class="navbar-item is-secondary">
+            Privacy
+          </a>
+          <a href="/support" class="navbar-item is-secondary">
+            Support
+          </a>
+          <a href="/contribute" class="navbar-item is-secondary">
+            Contribute
+          </a>
+          <a href="/blog" class="navbar-item is-secondary">
+            Blog
+          </a>
+          <a href="/about" class="navbar-item is-secondary">
+            About
+          </a>
+        </div>
+      </div>
+  </div>
+</nav>
+
+
+
+<section class="section is-medium">
+  <div class="container content">
+    <div class="columns">
+      <div class="column is-centered-tablet-portrait">
+
+<div id="post-index" class="container">
+    <ul class="post-list">
+        
+        
+            <li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="https://gitjournal.io/blog/2020/06/12/gitjournal-may-update/" itemprop="url" title="Go to post detail">
+        <h1 class="title section-title">GitJournal May Update</h1>
+        <time class="post-stub-date" datetime="2020-06-12">Published Fri, Jun 12, 2020</time>
+        <br>
+    </a>
+    
+
+<p><a href="https://gitjournal.io">GitJournal</a> is a mobile first note taking application integrated with Git. It’s based on the idea that you should have control over your data, and that we all multiple devices in our daily lives, and therefore need to be in control of the mechanism to synchronize our notes across these devices.</p>
+
+<p>Git was chosen as the method to do so, as there are already many <a href="https://github.com/GitJournal/GitJournal/blob/master/docs/git_hosts.md">commercial provides of Git</a>, and setting up your own Git Server has a much lower barrier to entry than any other setup.</p>
+
+<p>GitJournal is <a href="https://github.com/GitJournal/GitJournal">open source</a> and available on both Android and iOS. Here are some screenshots to get your started -</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/5120/1*zS57XsyO9XNgyZJIMjyYSg.jpeg" alt="" /></p>
+
+<hr />
+
+<p>Here are some of the big changes done in May -</p>
+
+<h1 id="tag-support">Tag Support</h1>
+
+<p>One of GitJournal’s goals is to be compatible with other Note Taking and Markdown Editing apps. As GitJournal is currently targeting a bit more technical users, each of them have their own preferences on how to edit notes on the desktop.</p>
+
+<p>In an effort to be more compatible with <a href="https://notable.md/">Notable</a>, you can now assign tags to your notes.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1434/1*UrcDEA8QIofrK8S3OUOi-A.jpeg" alt="" /></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1434/1*HOb5u3rJuDAkr7OK4g1G5Q.jpeg" alt="" /></p>
+
+<p>Inline tags are something I’m still working on, if you think it’s important, please vote on <a href="https://github.com/GitJournal/GitJournal/issues/44">the issue</a>. GitHub issues are the primary mechanism for prioritizing tasks.</p>
+
+<h1 id="image-support">Image Support</h1>
+
+<p>One of the top voted <a href="https://github.com/GitJournal/GitJournal/issues/10">issues</a> was to allow images to be added to Notes. This was finally done this month.</p>
+
+<p>Images are stored in same directory as the image or you can change it to store them in a specific folder.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/576/1*vxBLtHVgIvI6N31eBAQNEA.gif" alt="Save Images into your Git Repo" /></p>
+
+<h1 id="number-of-pending-changes">Number of Pending Changes</h1>
+
+<p>GitJournal makes a new commit after every change performed. These changes, by default, are pushed to the git remote automatically. However, one can make this setting to control when the changes are synchronized.</p>
+
+<p>The synchronize button now shows a helpful number to indicate the number of changes.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1440/1*8147f9DNEbiklrV3mLIA5A.jpeg" alt="" /></p>
+
+<h1 id="note-modification-state">Note Modification State</h1>
+
+<p>A small usability feature was added to clearly convey when a note has been modified -</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2160/1*7bEuacW1MWsybR7aGBk80A.gif" alt="Indicate via ✗ or ✓ when the Note has been modified" /></p>
+
+<h1 id="custom-repo-during-setup-process">Custom Repo during Setup Process</h1>
+
+<p>GitJournal can be used with any repo that supports SSH access. However, setting up a repo can be a bit cumbersome when you need to deal with SSH keys and enter the clone url.</p>
+
+<p>Here is what the process for a custom repo -</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/576/1*CJ3jTwAau1Mr9BA4BACDkQ.gif" alt="GitJournal works with any Git Repo over SSH" /></p>
+
+<p>In order to make this process simpler, GitJournal integrates with GitHub and GitLab and lets us handle all of this seamlessly. This comes at a price, though, it requires giving GitJournal access to all your public and private repositories. Even though GitJournal doesn’t have any server side component and the OAuth token is only temporarily held by the app, it can make people uncomfortable. Which is why we offer, both an automatic mode and manual mode, where we guide you through the steps of adding the SSH keys.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/576/1*LaAw5PQd76xc9mnI4njpcw.gif" alt="GitJournal’s Quick Repo Setup" /></p>
+
+<p>Earlier the setup would only automatically create a repo called **“journal”, **from now on you can choose any repo, or create a new one within the app.</p>
+
+<h1 id="txt-files-support">Txt Files Support</h1>
+
+<p>While GitJournal’s default format is Markdown, this month we added the ability to read and write any file that ends with a <code>.txt</code> . The disadvantage is that there is no place to store the note metadata with these files, as with markdown files it is stored in a YAML Header.</p>
+
+<p>However, my plan for the coming weeks is to fetch the creation and modification date of the notes from the Git repository directly. This way there will always be a fallback, and we can even remove the YAML Header entirely without losing any features.</p>
+
+<p>With <code>.txt</code> files, the raw editor becomes the default and the markdown editor is hidden -</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1440/1*gJQ3qRgS0nSG_NlMBR-Z_Q.jpeg" alt="" /></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1440/1*wVAdNBn0VezDAqgvJn8hEA.jpeg" alt="" /></p>
+
+<h1 id="debug-panel">Debug Panel</h1>
+
+<p>I hope no one will ever need to use this feature, but bugs are inevitable, and since many of our users are developers, and like to know what’s going on — There is now a Debug section in the Settings.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1440/1*uEW8snpCsYwMkXmu5ndXvA.jpeg" alt="" /></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1440/1*5tkoY9VJDPgfuope0-bR1w.jpeg" alt="Debug Screen" /></p>
+
+<h1 id="backlinks">BackLinks</h1>
+
+<p>GitJournal has always supported linking to other notes via the <a href="https://www.markdownguide.org/basic-syntax/#links">classical markdown syntax</a>. It’s an easy way to create a connect your notes together. Now, with each note when previewing the note, you’ll also see what other notes link to this note -</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1440/1*1nhRErlUzMMgT_NVBw-0sQ.jpeg" alt="" /></p>
+
+<p>For the full list of new features, please read the <a href="https://github.com/GitJournal/GitJournal/blob/master/CHANGELOG.md">changelog</a>.</p>
+
+<hr />
+
+<p>GitJournal is completely <a href="https://github.com/GitJournal/GitJournal">Open Source</a> and is supported by its patrons by paying a monthly subscription for some “Pro Features”. I’ve implemented a pay-what-you-want model so people from all different income levels and countries can easily access the pro features. And in the case when even that is not possible, the entire code base — including Pro features — is completely open source and freely available.</p>
+
+</li>
+
+        
+    </ul>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    
+<footer class="footer footer-dark">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="footer-logo">
+          <img src="/images/logos/logo.svg">
+        </div>
+      </div>
+      <div class="column">
+        <div class="footer-column">
+          <div class="footer-header">
+            <h3>Follow Us</h3>
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <a class="level-item" href="https://github.com/GitJournal/GitJournal">
+                  <span class="icon"><i class="fa fa-github"></i></span>
+                </a>
+                <a class="level-item" href="https://reddit.com/r/GitJournal">
+                  <span class="icon"><i class="fa fa-reddit"></i></span>
+                </a>
+                <a class="level-item" href="https://twitter.com/gitjournal_io">
+                  <span class="icon"><i class="fa fa-twitter"></i></span>
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  </body>
+</html>
