@@ -39,8 +39,9 @@ Long before I started GitJournal, I had been storing my notes and journal entrie
       
       <guid>https://gitjournal.io/contribute/</guid>
       <description>GitJournal is an Open Souce project, and can always use the help.
-While code contributions are always welcome, what I really need help with is testing, bug reports, and exposure. So if GitJournal has been useful for you, please tell others about it or post about it on your favorite site.
-As always, I&amp;rsquo;m very interested in your experience while using GitJournal. Especially your note workflow and how GitJournal fits into it.</description>
+You can help via -
+ Translating GitJournal Voting on Existing Issues Requesting new Features Donating via Paypal  Additionally, if GitJournal has been useful for you, please tell others about it or post about it on your favorite site.
+Feel free to send me an email at feedback@gitjournal.io</description>
     </item>
     
     <item>
@@ -51,6 +52,30 @@ As always, I&amp;rsquo;m very interested in your experience while using GitJourn
       <guid>https://gitjournal.io/apple_eula/</guid>
       <description>GitJournal End User License Agreement
 This End User License Agreement (“Agreement”) is between you and GitJournal and governs use of this app made available through the Apple App Store. By installing the GitJournal App, you agree to be bound by this Agreement and understand that there is no tolerance for objectionable content. If you do not agree with the terms and conditions of this Agreement, you are not entitled to use the GitJournal App.</description>
+    </item>
+    
+    <item>
+      <title>Foam</title>
+      <link>https://gitjournal.io/docs/apps/foam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/docs/apps/foam/</guid>
+      <description>You can easily use GitJournal on your mobile / tablet, along with Foam on the desktop. In fact Foam recommends GitJournal as the recommended mobile app. Both projects are in contact with each other to ensure they work well together.
++
+How to Sync?  Manually - You may use git commands from the terminal or directly from within Foam.
+ Automatically - You can install git-auto-sync in order to monitor certain folders and automatically commit and push the changes.</description>
+    </item>
+    
+    <item>
+      <title>Joplin Import</title>
+      <link>https://gitjournal.io/docs/import/joplin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/docs/import/joplin/</guid>
+      <description>Joplin is an awesome note taking app, unfortunately it uses its own custom JEX format, instead of the more standard Markdown format, and therefore cannot be used with GitJournal. However, Joplin does support exporting your notes to markdown.
+Instructions  File -&amp;gt; Export -&amp;gt; Markdown
+ Copy the markdown files to your existing Git Repo Folder
+  Related  Why use the Markdown format? How to setup automatic syncing?</description>
     </item>
     
     <item>
