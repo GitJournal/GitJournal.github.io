@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/vishesh/src/gitjournal/gitjournal.io",
+	"sourceRoot": "/home/runner/work/gitjournal.io/gitjournal.io",
 	"sources": [
 		"stdin"
 	],

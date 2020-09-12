@@ -87,47 +87,28 @@ if (!doNotTrack) {
   <h2 class="text-sm"></h2>
 
   <div class="mt-12">
-    
-
-<p>Please email me at <a href="mailto:support@gitjournal.io">support@gitjournal.io</a> for any questions.</p>
-
+    <p>Please email me at <a href="mailto:support@gitjournal.io">support@gitjournal.io</a> for any questions.</p>
 <h1 id="faq">FAQ</h1>
-
 <h2 id="general">General</h2>
-
 <h3 id="why-create-another-note-taking-app">Why create another Note Taking App?</h3>
-
 <p>There are many Note taking apps on the desktop, but the mobile space is lacking good note taking apps which give you control over your data and operate with open protocols.</p>
-
 <h3 id="what-is-git-and-why-should-i-care">What is Git and why should I care?</h3>
-
 <p>We all have many different devices. Our notes need to be accessible on all these devices. Synchronization is an essential feature of any note taking application. Most apps use DropBox or Google Drive. The problem is these synchronization mechanisms are not open and are controlled by single corporations.</p>
-
 <p>The aim with GitJournal was to allow anyone to manage their notes across different devices without relying on a specific corporation. Git is a well tested protocol that has many advantages - there are many commercial providers of Git (GitHub / GitLab), most corporations already have their own git servers, and as an individual running your own Git server has a much lower barrier to entry than any other custom program.</p>
-
 <p>You should get to decide who you trust with your data. GitJournal is just a way of accessing that data.</p>
-
 <h2 id="desktop-app">Desktop App</h2>
-
 <p>GitJournal&rsquo;s <a href="https://github.com/GitJournal/GitJournal/issues/137">desktop app</a> is still in its early stages. However, GitJournal is built with the idea of customizability. No one note taking app works for everyone, and GitJournal tries to be compatible with most desktop notes applications.</p>
-
 <p>Here are some of our recommendations -</p>
-
 <ul>
 <li><a href="https://foambubble.github.io/foam/">Foam</a></li>
 <li><a href="zettlr.com">Zettlr</a></li>
 <li><a href="https://notable.app/">Notable</a> [Not Open Source]</li>
 <li><a href="https://obsidian.md/">Obsidian</a> [Not Open Source]</li>
 </ul>
-
 <p>Each of these Note taking applications is built around simple markdown files, which can then be synced via Git.</p>
-
 <h2 id="auto-syncing-from-the-desktop">Auto syncing from the Desktop</h2>
-
 <p>With Git every change needs to be committed and pushed in order to sync. None of the desktop apps mentioned do this automatically, and therefore you need to know a bit about Git.</p>
-
 <p>One alternative is to run a script to do this automatically -</p>
-
 <pre><code>#!/usr/bin/env bash
 
 cd NOTES_FOLDER
@@ -143,28 +124,16 @@ then
 else
 	git pull
 fi
-</code></pre>
-
-<p>Change <code>NOTES_FOLDER</code> to where your notes are present.</p>
-
+</code></pre><p>Change <code>NOTES_FOLDER</code> to where your notes are present.</p>
 <h2 id="pro-mode">Pro Mode</h2>
-
 <p>Sustaining an Open Source Project can be challenging in the long term. The idea with GitJournal is to be a 100% Open Source Project - No Open Core model. Currently we are experimenting by having a subscription based Pro mode, which can be activated by paying the amount you feel appropriate.</p>
-
 <p>No matter what you pay, all pro features will be accessible to you.</p>
-
 <p>We didn&rsquo;t feel comfortable charging a standard 5-10$/month as that can be a significant amount in some countries. Depending on your country the lowest amount might be 1-2$ / month. If this amount is too high, please contact me, and I can accordingly lower it for that country.</p>
-
 <p>Additionally, if you really like GitJournal, but cannot afford it, please <a href="mailto:vhanda@gitjournal.io">email me</a>. I&rsquo;ll be happy to give you Pro access for free. Money isn&rsquo;t the primary motivator for this project - It&rsquo;s more important that people have control over their data.</p>
-
 <h2 id="what-about-encryption">What about Encryption?</h2>
-
 <p>GitJournal does not store any of your notes. They are stored by your Git Host such as GitHub or Gitlab. We do <a href="https://github.com/GitJournal/GitJournal/issues/182">plan</a> to eventually offer encrypted Git Hosting, but for now the main focus is improving the mobile app experience.</p>
-
 <h2 id="can-i-use-gitjournal-with-my-own-server">Can I use GitJournal with my own server?</h2>
-
 <p>Yes. GitJournal uses ssh, so any server accessible via ssh should be usable. If you&rsquo;re running your own server, perhaps you should think about <a href="https://www.sshaudit.com/hardening_guides.html">hardening it</a>.</p>
-
 <p>Also if you&rsquo;re using a non standard ssh port you will need to type the full url. Eg - <code>ssh://user@host.com:PORT/path/to/repo/journal.git</code></p>
 
   </div>
