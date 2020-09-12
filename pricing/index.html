@@ -1,0 +1,417 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitJournal</title>
+
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://gitjournal.io/styles/main.min.css" media="screen" crossorigin="anonymous">
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-132430504-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body class=''>
+  <div id="app" class="flex flex-col min-h-screen font-mono">
+    
+
+<header class="container mx-auto sm:flex sm:justify-between sm:max-w-3xl xl:max-w-5xl">
+  <div class="flex items-center justify-between px-4 py-2" :class="isOpen ? 'shadow-sm' : 'shadow-none'">
+    <div>
+      <a href="/">
+        <img class="h-8" src="/images/logos/icon-logo.svg" alt="GitJournal" />
+      </a>
+    </div>
+    <div class="sm:hidden">
+      <button @click="isOpen = !isOpen" type="button"
+        class="text-gray-800 hover:text-green-400 focus:text-green-900 focus:outline-none">
+        <svg v-if="!isOpen" class="h-8 w-8 fill-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg v-if="isOpen" class="h-8 w-8 fill-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div :class="isOpen ? 'block' : 'hidden'" class="px-1 py-3 pb-3 shadow-lg font-normal rounded sm:flex sm:shadow-none">
+    
+    <a class="block mt-1 text-center py-2 text-gray-900 hover:bg-green-400 rounded text-l sm:mx-3 sm:hover:bg-transparent sm:hover:text-green-500 xl:text-xl"
+      href="/pricing">Pricing</a>
+    
+    <a class="block mt-1 text-center py-2 text-gray-900 hover:bg-green-400 rounded text-l sm:mx-3 sm:hover:bg-transparent sm:hover:text-green-500 xl:text-xl"
+      href="/support">Docs</a>
+    
+    <a class="block mt-1 text-center py-2 text-gray-900 hover:bg-green-400 rounded text-l sm:mx-3 sm:hover:bg-transparent sm:hover:text-green-500 xl:text-xl"
+      href="/contribute">Contribute</a>
+    
+    <a class="block mt-1 text-center py-2 text-gray-900 hover:bg-green-400 rounded text-l sm:mx-3 sm:hover:bg-transparent sm:hover:text-green-500 xl:text-xl"
+      href="/blog">Blog</a>
+    
+    <a class="block mt-1 text-center py-2 text-gray-900 hover:bg-green-400 rounded text-l sm:mx-3 sm:hover:bg-transparent sm:hover:text-green-500 xl:text-xl"
+      href="/about">About</a>
+    
+  </div>
+</header>
+
+
+    <div class="flex-grow self-center mt-16 mb-16 px-4">
+
+      
+
+<h1 class="text-5xl text-center font-medium pb-2 leading-tight"> A fair price for you</h1>
+<h1 class="text-base text-center font-light pb-20">GitJournal is 100% Open Source and will always be</h1>
+
+<div class="container max-w-2xl mx-auto">
+  
+
+  
+
+  <table class="table-auto">
+    <thead>
+      <tr>
+        <th class="w-1/2 px-4 py-2 align-text-top">Feature</th>
+        <th class="w-1/4 px-4 py-2 align-text-top">
+          <div>Basic</div>
+          <div class="font-light pt-2 text-sm text-right">Android - Free&nbsp;<br>Ios - 3.99$</div>
+        </th>
+        <th class="w-1/4 px-4 py-2 align-text-top">
+          <div>Pro</div>
+          <div class="font-light pt-2 text-sm">Pay-what-you-want (with a minimum)</div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr :class="true ? 'bg-gray-100': 'bg-transparent'">
+        <td class="border px-4 py-2">Basic Search</td>
+        <td class="border px-4 py-2 text-green-500">
+          
+          <svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+
+          
+        </td>
+        <td class="border px-4 py-2 text-green-500"><svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+</td>
+      </tr>
+      
+      <tr :class="false ? 'bg-gray-100': 'bg-transparent'">
+        <td class="border px-4 py-2">Dark Mode</td>
+        <td class="border px-4 py-2 text-green-500">
+          
+          <svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+
+          
+        </td>
+        <td class="border px-4 py-2 text-green-500"><svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+</td>
+      </tr>
+      
+      <tr :class="true ? 'bg-gray-100': 'bg-transparent'">
+        <td class="border px-4 py-2">Raw Editor</td>
+        <td class="border px-4 py-2 text-green-500">
+          
+          <svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+
+          
+        </td>
+        <td class="border px-4 py-2 text-green-500"><svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+</td>
+      </tr>
+      
+      <tr :class="false ? 'bg-gray-100': 'bg-transparent'">
+        <td class="border px-4 py-2">Folder Support</td>
+        <td class="border px-4 py-2 text-green-500">
+          
+          <svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+
+          
+        </td>
+        <td class="border px-4 py-2 text-green-500"><svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+</td>
+      </tr>
+      
+      <tr :class="true ? 'bg-gray-100': 'bg-transparent'">
+        <td class="border px-4 py-2">Customize Default File Name</td>
+        <td class="border px-4 py-2 text-green-500">
+          
+          <svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+
+          
+        </td>
+        <td class="border px-4 py-2 text-green-500"><svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+</td>
+      </tr>
+      
+      <tr :class="false ? 'bg-gray-100': 'bg-transparent'">
+        <td class="border px-4 py-2">Customize Note Meta Data</td>
+        <td class="border px-4 py-2 text-green-500">
+          
+          <svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+
+          
+        </td>
+        <td class="border px-4 py-2 text-green-500"><svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+</td>
+      </tr>
+      
+      <tr :class="true ? 'bg-gray-100': 'bg-transparent'">
+        <td class="border px-4 py-2">Note Tags</td>
+        <td class="border px-4 py-2 text-green-500">
+          
+        </td>
+        <td class="border px-4 py-2 text-green-500"><svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+</td>
+      </tr>
+      
+      <tr :class="false ? 'bg-gray-100': 'bg-transparent'">
+        <td class="border px-4 py-2">Note Backlinks</td>
+        <td class="border px-4 py-2 text-green-500">
+          
+        </td>
+        <td class="border px-4 py-2 text-green-500"><svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+</td>
+      </tr>
+      
+      <tr :class="true ? 'bg-gray-100': 'bg-transparent'">
+        <td class="border px-4 py-2">Customize Home Screen</td>
+        <td class="border px-4 py-2 text-green-500">
+          
+        </td>
+        <td class="border px-4 py-2 text-green-500"><svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+</td>
+      </tr>
+      
+      <tr :class="false ? 'bg-gray-100': 'bg-transparent'">
+        <td class="border px-4 py-2">Zen Mode</td>
+        <td class="border px-4 py-2 text-green-500">
+          
+        </td>
+        <td class="border px-4 py-2 text-green-500"><svg class="w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd"
+    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+    clip-rule="evenodd" />
+</svg>
+</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <div class="mt-16">
+    <h2>The Pro version can be purchased via -</h2>
+    <ol class="mt-4">
+      <li class="mt-2"><span class="text-lg font-bold mr-3">One Time Purchase:</span><span>Permanently enables all Pro features
+          currently
+          in
+          GitJournal
+          and
+          new features added in the following 12 months</span></li>
+      <li class="mt-2"><span class="text-lg font-bold mr-3">Monthly Subscription:</span><span>Enables all Pro Features. After 12
+          months or
+          after paying
+          the
+          min yearly purchase, you will get all the benefits of the 'One Time Purchase'</span></li>
+    </ol>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    
+
+<footer class="py-12 bg-gray-100 min-w-full">
+
+  <div class="flex flex-wrap mt-8 px-4 md:flex-no-wrap md:justify-center">
+    
+    <div class="mx-auto py-4 px-4 whitespace-no-wrap md:m-0 md:px-8">
+      <h2 class="text-xl font-medium">GitJournal</h2>
+      <ul class="mt-3">
+        
+        <a class="hover:text-green-500" href="/about">
+          <li class="my-1">About Us</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="/support">
+          <li class="my-1">FAQ</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="/privacy">
+          <li class="my-1">Privacy</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="https://github.com/GitJournal/GitJournal/issues?q=is%3Aissue&#43;is%3Aopen&#43;sort%3Areactions-%2B1-desc">
+          <li class="my-1">Roadmap</li>
+        </a>
+        
+      </ul>
+    </div>
+    
+    <div class="mx-auto py-4 px-4 whitespace-no-wrap md:m-0 md:px-8">
+      <h2 class="text-xl font-medium">Social</h2>
+      <ul class="mt-3">
+        
+        <a class="hover:text-green-500" href="https://twitter.com/GitJournal_io">
+          <li class="my-1">Twitter</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="https://discord.gg/abBwyEK">
+          <li class="my-1">Discord</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="https://reddit.com/r/GitJournal">
+          <li class="my-1">Reddit</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="/newsletter">
+          <li class="my-1">Newsletter</li>
+        </a>
+        
+      </ul>
+    </div>
+    
+    <div class="mx-auto py-4 px-4 whitespace-no-wrap md:m-0 md:px-8">
+      <h2 class="text-xl font-medium">Spread the Word</h2>
+      <ul class="mt-3">
+        
+        <a class="hover:text-green-500" href="https://github.com/GitJournal/GitJournal">
+          <li class="my-1">Star the Project on GitHub</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="https://alternativeto.net/software/gitjournal/">
+          <li class="my-1">Like Us on Alternative To</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="https://yourstack.com/products/gitjournal">
+          <li class="my-1">Stack us on YourStack</li>
+        </a>
+        
+      </ul>
+    </div>
+    
+  </div>
+
+  <div class="mt-12">
+    <div class="text-center my-2">
+      © 2020 Vishesh Handa
+    </div>
+
+    <div class="text-xs text-center">Made with <a class="hover:text-green-500" href="https://gohugo.io/">Hugo</a>, <a
+        class="hover:text-green-500" href="https://tailwindcss.com/">Tailwind</a> and <a class="hover:text-green-500"
+        href="https://gitjournal.io">GitJournal</a></div>
+  </div>
+</footer>
+
+  </div>
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <script src="https://gitjournal.io/js/main.min.js"></script>
+  
+
+  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,423;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,423;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+</body>
+
+</html>

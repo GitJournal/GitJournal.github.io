@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sourceRoot": "/Users/vishesh/src/gitjournal/gitjournal.io",
+	"sources": [
+		"stdin"
+	],
+	"sourcesContent": [
+		"@tailwind base;\n@tailwind components;\n@tailwind utilities;\n"
+	],
+	"names": [],
+	"mappings": "AAAA,SAAS,CAAT,IAAS;AACT,SAAS,CAAT,UAAS;AACT,SAAS,CAAT,SAAS"
+}

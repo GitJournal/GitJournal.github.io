@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GitJournal</title>
+    <title>Hugo Tailwind Starter on GitJournal</title>
     <link>https://gitjournal.io/</link>
-    <description>Recent content on GitJournal</description>
+    <description>Recent content in Hugo Tailwind Starter on GitJournal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Jun 2020 00:00:00 +0000</lastBuildDate>
@@ -13,11 +13,11 @@
     
     <item>
       <title>GitJournal May Update</title>
-      <link>https://gitjournal.io/blog/2020/06/12/gitjournal-may-update/</link>
+      <link>https://gitjournal.io/blog/2020-06-12-may-update/</link>
       <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://gitjournal.io/blog/2020/06/12/gitjournal-may-update/</guid>
-      <description>GitJournal is a mobile first note taking application integrated with Git. It’s based on the idea that you should have control over your data, and that we all multiple devices in our daily lives, and therefore need to be in control of the mechanism to synchronize our notes across these devices.
+      <guid>https://gitjournal.io/blog/2020-06-12-may-update/</guid>
+      <description>GitJournal is a mobile first note taking application integrated with Git. It’s based on the idea that you should have control over your data, and that we all have multiple devices in our daily lives, and therefore need to be in control of the mechanism to synchronize our notes across these devices.
 Git was chosen as the method to do so, as there are already many commercial provides of Git, and setting up your own Git Server has a much lower barrier to entry than any other setup.</description>
     </item>
     
@@ -27,8 +27,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gitjournal.io/about/</guid>
-      <description>Hi! My name is Vishesh.
-I&amp;rsquo;m the author of GitJournal. I&amp;rsquo;ve been writing open source software for over a decade, and care a lot about data privacy and making it more accessible to the rest of the world.
+      <description>Hi! My name is Vishesh. I&amp;rsquo;m the author of GitJournal. I&amp;rsquo;ve been writing open source software for over a decade, and care a lot about data privacy and making it more accessible to the rest of the world.
 Long before I started GitJournal, I had been storing my notes and journal entries in plain text or markdown files. It&amp;rsquo;s a simple everlasting format that works with almost all editors. What was lacking was a way to synchronize my notes over multiple devices, while still having control of my data.</description>
     </item>
     
@@ -76,6 +75,33 @@ How to Sync?  Manually - You may use git commands from the terminal or directly 
 Instructions  File -&amp;gt; Export -&amp;gt; Markdown
  Copy the markdown files to your existing Git Repo Folder
   Related  Why use the Markdown format? How to setup automatic syncing?</description>
+    </item>
+    
+    <item>
+      <title>Newsletter</title>
+      <link>https://gitjournal.io/newsletter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/newsletter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Page</title>
+      <link>https://gitjournal.io/page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/page/</guid>
+      <description>This is a page</description>
+    </item>
+    
+    <item>
+      <title>Pricing</title>
+      <link>https://gitjournal.io/pricing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/pricing/</guid>
+      <description></description>
     </item>
     
     <item>
