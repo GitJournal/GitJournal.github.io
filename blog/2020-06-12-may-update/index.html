@@ -189,6 +189,48 @@ if (!doNotTrack) {
   </div>
 </article>
 
+<hr class="mt-12">
+
+<div class="mt-8 mb-8 text-gray-900">
+  Want to talk about this post? <a class="hover:text-green-500 underline" href="https://www.reddit.com/r/GitJournal/comments/h7ibi2/gitjournal_may_update/">Discuss this on Reddit →</a>
+</div>
+
+<div v-if="!newsletter.success && !newsletter.fail" class="bg-white shadow-md rounded px-4 py-6">
+
+  <div class="text-lg font-bold">Want product news and updates?</div>
+  <div class="text-sm mt-2">Subscribe to the GitJournal newsletter. Roughly one email a month.</div>
+
+  <form id='gj-newsletter' class="flex flex-wrap md:flex-no-wrap my-4">
+    <input
+      class="appearance-none border rounded py-2 px-3 my-2 w-full md:w-1/3 md:mr-2 leading-tight focus:outline-none focus:shadow-outline"
+      name="name" id='gj-name' type="text" placeholder="First Name">
+    <input
+      class="appearance-none border rounded py-2 px-3 my-2 w-full md:w-2/3 md:flex md:mr-2 leading-tight focus:outline-none focus:shadow-outline"
+      name="email" id='gj-email' type="email" placeholder="Email">
+
+    <button
+      class="bg-green-500 hover:bg-green-700 w-full my-2 md:w-auto md:flex-auto text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
+      type="submit">
+      Subscribe
+    </button>
+  </form>
+</div>
+
+
+<div v-if="newsletter.success" class="px-4 py-6">
+  <div class="text-lg font-bold">Thank you</div>
+  <div class="text-sm mt-2">You have been sent a confirmation email.</div>
+</div>
+
+
+<div v-if="newsletter.fail" class="px-4 py-6">
+  <div class="text-lg font-bold">Failed</div>
+  <div class="text-sm mt-2">
+    &lt;&lt; newsletter.failReason>>
+  </div>
+</div>
+
+
 
     </div>
 
