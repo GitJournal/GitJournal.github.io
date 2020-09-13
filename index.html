@@ -23,11 +23,21 @@
 
   
 <script type="application/javascript">
-var doNotTrack = false;
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-132430504-1', 'auto');
-	
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-132430504-1', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>
@@ -83,8 +93,8 @@ if (!doNotTrack) {
 
       
 
-<div class="text-center text-5xl font-medium">GitJournal</div>
-<div class="text-center text-base font-light mt-2">Mobile first Markdown Notes integrated with Git</div>
+<div class="gj-title">GitJournal</div>
+<div class="gj-subtitle mt-2">Mobile first Markdown Notes integrated with Git</div>
 
 <div class="flex flex-wrap items-center justify-center mt-16 mb-16">
   <a class="mx-1 my-1" href="https://play.google.com/store/apps/details?id=io.gitjournal.gitjournal&pcampaignid=website">

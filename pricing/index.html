@@ -22,11 +22,21 @@
 
   
 <script type="application/javascript">
-var doNotTrack = false;
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-132430504-1', 'auto');
-	
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-132430504-1', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
 	ga('send', 'pageview');
 }
 </script>
@@ -82,8 +92,8 @@ if (!doNotTrack) {
 
       
 
-<h1 class="text-5xl text-center font-medium pb-2 leading-tight"> A fair price for you</h1>
-<h1 class="text-base text-center font-light pb-20">GitJournal is 100% Open Source and will always be</h1>
+<h1 class="gj-title"> A fair price for you</h1>
+<h1 class="gj-subtitle pb-20">GitJournal is 100% Open Source and will always be</h1>
 
 <div class="container max-w-2xl mx-auto">
   
@@ -285,16 +295,11 @@ if (!doNotTrack) {
     <h2>The Pro version can be purchased via -</h2>
     <ol class="mt-4">
       <li class="mt-2"><span class="text-lg font-bold mr-3">One Time Purchase:</span><span>Permanently enables all Pro features
-          currently
-          in
-          GitJournal
-          and
-          new features added in the following 12 months</span></li>
+          currently in GitJournal and new features added in the following 12 months.</span>
+      </li>
       <li class="mt-2"><span class="text-lg font-bold mr-3">Monthly Subscription:</span><span>Enables all Pro Features. After 12
-          months or
-          after paying
-          the
-          min yearly purchase, you will get all the benefits of the 'One Time Purchase'</span></li>
+          months or after paying the min yearly purchase, you will get all the benefits of the 'One Time Purchase'.</span>
+      </li>
     </ol>
   </div>
 
