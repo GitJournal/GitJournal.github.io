@@ -95,49 +95,94 @@ if (!doNotTrack) {
 
 
 <article class="prose xl:prose-xl">
-  <h1 class="text-4xl mt-1 m-0">Version 1.68</h1>
-  <h2 class="text-sm">2020-08-31</h2>
+  <h1>Version 1.68</h1>
+  <h4>2020-08-31</h4>
 
   
-  <h2 class="text-xl my-16">Features</h2>
+  <h2 class="text-xl mt-16">Features</h2>
   <ul>
-    
-    <li>
-      <h3>One Time Purchase</h3>
-      <p>We are changing the buisness model from typical subscriptions to a model where you forever own the features you have paid for. The earlier monthly subscription is still available, but that will automatically convert into a One Time Purchase after 12 months.</p>
+  
+  <li>
+    <h3>One Time Purchase</h3>
+    <p>We are changing the buisness model from typical subscriptions to a model where you forever own the features you have paid for. The earlier monthly subscription is still available, but that will automatically convert into a One Time Purchase after 12 months.</p>
 
-      
-    </li>
     
-  </ul>
+  </li>
+  
+</ul>
+
   
 
 
   
-  <h2 class="text-xl my-16">Improvements</h2>
+  <h2 class="text-xl mt-16">Improvements</h2>
   <ul>
-    
-    <li>
-      <h3>Make Swipe to delete configurable</h3>
-      <p>Apparently, many users hate it and accidentally trigger it quite often.</p>
+  
+  <li>
+    <h3>Make Swipe to delete configurable</h3>
+    <p>Apparently, many users hate it and accidentally trigger it quite often.</p>
 
-      
-    </li>
     
-    <li>
-      <h3>Allow Markdown to be previewd from all Editors</h3>
-      <p>All of GitJournal&#39;s editors are compatible and operate on the same markdown file. Earlier you could only preview the rendered markdown when with the Markdown Editor.</p>
+  </li>
+  
+  <li>
+    <h3>Allow Markdown to be previewd from all Editors</h3>
+    <p>All of GitJournal&#39;s editors are compatible and operate on the same markdown file. Earlier you could only preview the rendered markdown when with the Markdown Editor.</p>
 
-      
-    </li>
     
-  </ul>
+  </li>
+  
+</ul>
+
   
 
 
   
 
 </article>
+
+<hr class="mt-16">
+
+
+<div class="mt-16"></div>
+
+
+
+<div v-if="!newsletter.success && !newsletter.fail" class="bg-white shadow-md rounded px-4 py-6">
+
+  <div class="text-lg font-bold">Want product news and updates?</div>
+  <div class="text-sm mt-2">Subscribe to the GitJournal newsletter. Roughly one email a month.</div>
+
+  <form id='gj-newsletter' class="flex flex-wrap md:flex-no-wrap my-4">
+    <input
+      class="appearance-none border rounded py-2 px-3 my-2 w-full md:w-1/3 md:mr-2 leading-tight focus:outline-none focus:shadow-outline"
+      name="name" id='gj-name' type="text" placeholder="First Name">
+    <input
+      class="appearance-none border rounded py-2 px-3 my-2 w-full md:w-2/3 md:flex md:mr-2 leading-tight focus:outline-none focus:shadow-outline"
+      name="email" id='gj-email' type="email" placeholder="Email">
+
+    <button
+      class="bg-green-500 hover:bg-green-700 w-full my-2 md:w-auto md:flex-auto text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
+      type="submit">
+      Subscribe
+    </button>
+  </form>
+</div>
+
+
+<div v-if="newsletter.success" class="px-4 py-6">
+  <div class="text-lg font-bold">Thank you</div>
+  <div class="text-sm mt-2">You have been sent a confirmation email.</div>
+</div>
+
+
+<div v-if="newsletter.fail" class="px-4 py-6">
+  <div class="text-lg font-bold">Failed</div>
+  <div class="text-sm mt-2">
+    &lt;&lt; newsletter.failReason>>
+  </div>
+</div>
+
 
 
 

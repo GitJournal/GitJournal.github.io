@@ -95,34 +95,35 @@ if (!doNotTrack) {
 
 
 <article class="prose xl:prose-xl">
-  <h1 class="text-4xl mt-1 m-0">Version 1.69</h1>
-  <h2 class="text-sm">2020-09-04</h2>
+  <h1>Version 1.69</h1>
+  <h4>2020-09-04</h4>
 
   
-  <h2 class="text-xl my-16">Features</h2>
+  <h2 class="text-xl mt-16">Features</h2>
   <ul>
-    
-    <li>
-      <h3></h3>
-      <p>Add a fast dark mode switcher. Inspired by Telegram.</p>
+  
+  <li>
+    <h3></h3>
+    <p>Add a fast dark mode switcher. Inspired by Telegram.</p>
 
-      
-      
-      <img src="/images/releases/1.69/dark_mode_switcher.gif" alt="">
-      
-    </li>
     
-    <li>
-      <h3>Inline Tags</h3>
-      <p>By default now typing with &#39;#feature&#39; will mark the note with the &#39;feature&#39; tag. As GitJournal is used in so many different ways, the inline tags prefix is quite configurable</p>
+    
+    <img class="w-2/3 md:w-1/2 mx-auto rounded" src="/images/releases/1.69/dark_mode_switcher.gif" alt="">
+    
+  </li>
+  
+  <li>
+    <h3>Inline Tags</h3>
+    <p>By default now typing with &#39;#feature&#39; will mark the note with the &#39;feature&#39; tag. As GitJournal is used in so many different ways, the inline tags prefix is quite configurable</p>
 
-      
-      
-      <img src="/images/releases/1.69/inline_tags.jpeg" alt="">
-      
-    </li>
     
-  </ul>
+    
+    <img class="w-2/3 md:w-1/2 mx-auto rounded" src="/images/releases/1.69/inline_tags.jpeg" alt="">
+    
+  </li>
+  
+</ul>
+
   
 
 
@@ -130,27 +131,71 @@ if (!doNotTrack) {
 
 
   
-  <h2 class="text-xl my-16">Bug Fixes</h2>
+  <h2 class="text-xl mt-16">Bug Fixes</h2>
   <ul>
-    
-    <li>
-      <h3>Parse Maps in the YAML Frontmatter</h3>
-      <p>Earlier they were being ignored. Unfortunately, the exact formatting of the map might not be preserved, as the YAML serializer still needs some work. Please vote on issue #239 to increase its priority</p>
+  
+  <li>
+    <h3>Parse Maps in the YAML Frontmatter</h3>
+    <p>Earlier they were being ignored. Unfortunately, the exact formatting of the map might not be preserved, as the YAML serializer still needs some work. Please vote on issue #239 to increase its priority</p>
 
-      
-    </li>
     
-    <li>
-      <h3>Hide Notes which could not be parsed.</h3>
-      <p>Those notes were still shown but in a mangled state. We now clearly hide those note. You can check the debug log to see which files are being ignored. The idea is to have a future FS view where you can see all the files in a repo, along with the reason why some of them do not appear as Notes</p>
+  </li>
+  
+  <li>
+    <h3>Hide Notes which could not be parsed.</h3>
+    <p>Those notes were still shown but in a mangled state. We now clearly hide those note. You can check the debug log to see which files are being ignored. The idea is to have a future FS view where you can see all the files in a repo, along with the reason why some of them do not appear as Notes</p>
 
-      
-    </li>
     
-  </ul>
+  </li>
+  
+</ul>
+
   
 
 </article>
+
+<hr class="mt-16">
+
+
+<div class="mt-16"></div>
+
+
+
+<div v-if="!newsletter.success && !newsletter.fail" class="bg-white shadow-md rounded px-4 py-6">
+
+  <div class="text-lg font-bold">Want product news and updates?</div>
+  <div class="text-sm mt-2">Subscribe to the GitJournal newsletter. Roughly one email a month.</div>
+
+  <form id='gj-newsletter' class="flex flex-wrap md:flex-no-wrap my-4">
+    <input
+      class="appearance-none border rounded py-2 px-3 my-2 w-full md:w-1/3 md:mr-2 leading-tight focus:outline-none focus:shadow-outline"
+      name="name" id='gj-name' type="text" placeholder="First Name">
+    <input
+      class="appearance-none border rounded py-2 px-3 my-2 w-full md:w-2/3 md:flex md:mr-2 leading-tight focus:outline-none focus:shadow-outline"
+      name="email" id='gj-email' type="email" placeholder="Email">
+
+    <button
+      class="bg-green-500 hover:bg-green-700 w-full my-2 md:w-auto md:flex-auto text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
+      type="submit">
+      Subscribe
+    </button>
+  </form>
+</div>
+
+
+<div v-if="newsletter.success" class="px-4 py-6">
+  <div class="text-lg font-bold">Thank you</div>
+  <div class="text-sm mt-2">You have been sent a confirmation email.</div>
+</div>
+
+
+<div v-if="newsletter.fail" class="px-4 py-6">
+  <div class="text-lg font-bold">Failed</div>
+  <div class="text-sm mt-2">
+    &lt;&lt; newsletter.failReason>>
+  </div>
+</div>
+
 
 
 
