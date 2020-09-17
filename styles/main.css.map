@@ -6,8 +6,8 @@
 		"stdin"
 	],
 	"sourcesContent": [
-		"@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n@layer components {\n  .gj-title {\n    @apply text-5xl text-center font-medium pb-2 leading-tight;\n  }\n  .gj-subtitle {\n    @apply text-base text-center font-light;\n  }\n}\n"
+		"@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n@layer components {\n  .gj-title {\n    @apply text-5xl text-center font-medium pb-2 leading-tight;\n  }\n  .gj-subtitle {\n    @apply text-lg text-center font-light tracking-tight;\n  }\n}\n"
 	],
 	"names": [],
-	"mappings": "AAAA,SAAS,CAAT,IAAS;AACT,SAAS,CAAT,UAAS;AACT,SAAS,CAAT,SAAS;AAET,MAAM,CAAN,UAAM;EACJ,AAAA,SAAS,CAAC;IACR,MAAM,CAAN,mDAAM,GACP;EACD,AAAA,YAAY,CAAC;IACX,MAAM,CAAN,gCAAM,GACP"
+	"mappings": "AAAA,SAAS,CAAT,IAAS;AACT,SAAS,CAAT,UAAS;AACT,SAAS,CAAT,SAAS;AAET,MAAM,CAAN,UAAM;EACJ,AAAA,SAAS,CAAC;IACR,MAAM,CAAN,mDAAM,GACP;EACD,AAAA,YAAY,CAAC;IACX,MAAM,CAAN,6CAAM,GACP"
 }
