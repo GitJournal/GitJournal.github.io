@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo Tailwind Starter on GitJournal</title>
+    <title>GitJournal</title>
     <link>https://gitjournal.io/</link>
-    <description>Recent content in Hugo Tailwind Starter on GitJournal</description>
+    <description>Recent content on GitJournal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 16 Sep 2020 00:00:00 +0000</lastBuildDate>
@@ -12,7 +12,7 @@
     
     
     <item>
-      <title></title>
+      <title>Version 1.70</title>
       <link>https://gitjournal.io/changelog/1.70/</link>
       <pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.69</title>
       <link>https://gitjournal.io/changelog/1.69/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -30,7 +30,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.68</title>
       <link>https://gitjournal.io/changelog/1.68/</link>
       <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
       
@@ -39,7 +39,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.66</title>
       <link>https://gitjournal.io/changelog/1.66/</link>
       <pubDate>Tue, 18 Aug 2020 00:00:00 +0000</pubDate>
       
@@ -48,7 +48,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.65</title>
       <link>https://gitjournal.io/changelog/1.65/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
       
@@ -57,7 +57,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.64</title>
       <link>https://gitjournal.io/changelog/1.64/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
       
@@ -66,7 +66,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.63</title>
       <link>https://gitjournal.io/changelog/1.63/</link>
       <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
       
@@ -75,7 +75,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.62</title>
       <link>https://gitjournal.io/changelog/1.62/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -84,7 +84,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.61</title>
       <link>https://gitjournal.io/changelog/1.61/</link>
       <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -93,7 +93,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.60</title>
       <link>https://gitjournal.io/changelog/1.60/</link>
       <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -102,7 +102,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.59</title>
       <link>https://gitjournal.io/changelog/1.59/</link>
       <pubDate>Thu, 09 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -111,7 +111,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.58</title>
       <link>https://gitjournal.io/changelog/1.58/</link>
       <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
       
@@ -130,7 +130,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.57</title>
       <link>https://gitjournal.io/changelog/1.57/</link>
       <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
       
@@ -139,7 +139,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.56</title>
       <link>https://gitjournal.io/changelog/1.56/</link>
       <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
       
@@ -148,7 +148,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.55</title>
       <link>https://gitjournal.io/changelog/1.55/</link>
       <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
       
@@ -157,7 +157,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.54</title>
       <link>https://gitjournal.io/changelog/1.54/</link>
       <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
       
@@ -166,7 +166,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.53</title>
       <link>https://gitjournal.io/changelog/1.53/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       
@@ -175,7 +175,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.52</title>
       <link>https://gitjournal.io/changelog/1.52/</link>
       <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
       
@@ -184,7 +184,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.51</title>
       <link>https://gitjournal.io/changelog/1.51/</link>
       <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
       
@@ -193,7 +193,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.50</title>
       <link>https://gitjournal.io/changelog/1.50/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
@@ -202,7 +202,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.49</title>
       <link>https://gitjournal.io/changelog/1.49/</link>
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -211,7 +211,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.48</title>
       <link>https://gitjournal.io/changelog/1.48/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -220,7 +220,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.47</title>
       <link>https://gitjournal.io/changelog/1.47/</link>
       <pubDate>Tue, 14 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -229,7 +229,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.46</title>
       <link>https://gitjournal.io/changelog/1.46/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0000</pubDate>
       
@@ -238,7 +238,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.34</title>
       <link>https://gitjournal.io/changelog/1.34/</link>
       <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -247,7 +247,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.45</title>
       <link>https://gitjournal.io/changelog/1.45/</link>
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -256,7 +256,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.44</title>
       <link>https://gitjournal.io/changelog/1.44/</link>
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -265,7 +265,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.43</title>
       <link>https://gitjournal.io/changelog/1.43/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -274,7 +274,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.42</title>
       <link>https://gitjournal.io/changelog/1.42/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -283,7 +283,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.41</title>
       <link>https://gitjournal.io/changelog/1.41/</link>
       <pubDate>Mon, 17 Feb 2020 00:00:00 +0000</pubDate>
       
@@ -292,7 +292,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.40</title>
       <link>https://gitjournal.io/changelog/1.40/</link>
       <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate>
       
@@ -301,7 +301,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.39</title>
       <link>https://gitjournal.io/changelog/1.39/</link>
       <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
       
@@ -310,7 +310,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.38</title>
       <link>https://gitjournal.io/changelog/1.38/</link>
       <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
       
@@ -319,7 +319,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.37</title>
       <link>https://gitjournal.io/changelog/1.37/</link>
       <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
       
@@ -328,7 +328,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.36</title>
       <link>https://gitjournal.io/changelog/1.36/</link>
       <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
       
@@ -337,7 +337,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.35</title>
       <link>https://gitjournal.io/changelog/1.35/</link>
       <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
       
@@ -346,7 +346,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.33</title>
       <link>https://gitjournal.io/changelog/1.33/</link>
       <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
       
@@ -355,7 +355,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.31</title>
       <link>https://gitjournal.io/changelog/1.31/</link>
       <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
       
@@ -364,7 +364,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.30</title>
       <link>https://gitjournal.io/changelog/1.30/</link>
       <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
       
@@ -373,7 +373,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.29</title>
       <link>https://gitjournal.io/changelog/1.29/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
@@ -382,7 +382,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.28</title>
       <link>https://gitjournal.io/changelog/1.28/</link>
       <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
       
@@ -391,7 +391,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.27</title>
       <link>https://gitjournal.io/changelog/1.27/</link>
       <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
       
@@ -400,7 +400,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.26</title>
       <link>https://gitjournal.io/changelog/1.26/</link>
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
       
@@ -409,7 +409,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.24</title>
       <link>https://gitjournal.io/changelog/1.24/</link>
       <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
       
@@ -418,7 +418,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.25</title>
       <link>https://gitjournal.io/changelog/1.25/</link>
       <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
       
@@ -427,7 +427,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.23</title>
       <link>https://gitjournal.io/changelog/1.23/</link>
       <pubDate>Sun, 08 Dec 2019 00:00:00 +0000</pubDate>
       
@@ -436,7 +436,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.22</title>
       <link>https://gitjournal.io/changelog/1.22/</link>
       <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
       
@@ -445,7 +445,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.21</title>
       <link>https://gitjournal.io/changelog/1.21/</link>
       <pubDate>Fri, 06 Dec 2019 00:00:00 +0000</pubDate>
       
@@ -454,7 +454,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.20</title>
       <link>https://gitjournal.io/changelog/1.20/</link>
       <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
       
@@ -463,7 +463,7 @@ Git was chosen as the method to do so, as there are already many commercial prov
     </item>
     
     <item>
-      <title></title>
+      <title>Version 1.19</title>
       <link>https://gitjournal.io/changelog/1.19/</link>
       <pubDate>Sat, 02 Nov 2019 00:00:00 +0000</pubDate>
       
@@ -527,21 +527,21 @@ Instructions   File -&amp;gt; Export -&amp;gt; Markdown
     </item>
     
     <item>
+      <title>Login</title>
+      <link>https://gitjournal.io/login/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/login/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Newsletter</title>
       <link>https://gitjournal.io/newsletter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://gitjournal.io/newsletter/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Page</title>
-      <link>https://gitjournal.io/page/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gitjournal.io/page/</guid>
-      <description>This is a page</description>
     </item>
     
     <item>
@@ -554,7 +554,7 @@ Instructions   File -&amp;gt; Export -&amp;gt; Markdown
     </item>
     
     <item>
-      <title>Privacy Policy</title>
+      <title>Privacy</title>
       <link>https://gitjournal.io/privacy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

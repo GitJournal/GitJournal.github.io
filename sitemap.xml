@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://gitjournal.io/changelog/1.70/</loc>
+    <loc>https://gitjournal.io/</loc>
     <lastmod>2020-09-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -13,7 +13,7 @@
   </url>
   
   <url>
-    <loc>https://gitjournal.io/</loc>
+    <loc>https://gitjournal.io/changelog/1.70/</loc>
     <lastmod>2020-09-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -297,11 +297,11 @@
   </url>
   
   <url>
-    <loc>https://gitjournal.io/newsletter/</loc>
+    <loc>https://gitjournal.io/login/</loc>
   </url>
   
   <url>
-    <loc>https://gitjournal.io/page/</loc>
+    <loc>https://gitjournal.io/newsletter/</loc>
   </url>
   
   <url>
