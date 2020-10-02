@@ -6,10 +6,20 @@
     <description>Recent content in Blog on GitJournal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://gitjournal.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GitJournal September Update</title>
+      <link>https://gitjournal.io/blog/2020-10-01-sept-update/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/blog/2020-10-01-sept-update/</guid>
+      <description>Last month, after much deliberation I&amp;rsquo;ve decided to start working on GitJournal full-time, till at least the end of the year. Before this I had been doing a mix of consulting and GitJournal.
+This is a scary big step to take. Getting paid from consulting is so much easier than a product. GitJournal&amp;rsquo;s revenue is still far away from covering my monthly expenses, but I think I can get there by the end of the year.</description>
+    </item>
     
     <item>
       <title>GitJournal May Update</title>

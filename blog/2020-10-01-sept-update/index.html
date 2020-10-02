@@ -1,0 +1,599 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>GitJournal September Update - GitJournal</title>
+  
+
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://gitjournal.io/styles/main.min.css" media="screen" crossorigin="anonymous">
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+
+  
+  <script async defer data-domain="gitjournal.io" src="https://plausible.gitjournal.io/js/index.js"></script>
+  <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+  
+
+  <script async defer src="/js/jquery-3.4.1.min.js"></script>
+  <script async defer src="/js/Chart-2.9.3.js"></script>
+</head>
+
+<body class=''>
+  
+  <div id="app" class="flex flex-col min-h-screen font-mono">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="container mx-auto sm:flex sm:justify-between sm:max-w-3xl xl:max-w-5xl mb-16">
+  <div class="flex items-center justify-between px-4 py-2" :class="isOpen ? 'shadow-sm' : 'shadow-none'">
+    <div class="flex flex-row items-center">
+      <a href="/">
+        <img class="h-8" src="/images/logos/icon-logo.svg" alt="GitJournal" />
+      </a>
+      <iframe class="pl-4" src="https://ghbtns.com/github-btn.html?user=GitJournal&repo=GitJournal&type=star&count=true"
+        frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+    </div>
+    <div class="sm:hidden">
+      <button @click="isOpen = !isOpen" type="button"
+        class="text-gray-800 hover:text-green-400 focus:text-green-900 focus:outline-none">
+        <svg v-if="!isOpen" class="h-8 w-8 fill-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg v-if="isOpen" class="h-8 w-8 fill-current" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div :class="isOpen ? 'block' : 'hidden'" class="px-1 py-3 pb-3 shadow-lg font-normal rounded sm:flex sm:shadow-none">
+    
+    
+    
+
+    <a class="block mt-1 text-center py-2 text-gray-900 hover:bg-green-400 rounded text-l sm:mx-3 sm:hover:bg-transparent sm:hover:text-green-500 xl:text-xl"
+      href="/pricing">Pricing</a>
+    
+    
+    
+
+    <a class="block mt-1 text-center py-2 text-gray-900 hover:bg-green-400 rounded text-l sm:mx-3 sm:hover:bg-transparent sm:hover:text-green-500 xl:text-xl"
+      href="/support">Docs</a>
+    
+    
+    
+    
+    
+
+    <a class="block mt-1 text-center py-2 text-gray-900 hover:bg-green-400 rounded text-l sm:mx-3 sm:hover:bg-transparent sm:hover:text-green-500 xl:text-xl"
+      href="https://gitjournal.io/changelog/1.70/">Changelog</a>
+    
+    
+    
+
+    <a class="block mt-1 text-center py-2 text-gray-900 hover:bg-green-400 rounded text-l sm:mx-3 sm:hover:bg-transparent sm:hover:text-green-500 xl:text-xl"
+      href="/blog">Blog</a>
+    
+    
+    
+
+    <a class="block mt-1 text-center py-2 text-gray-900 hover:bg-green-400 rounded text-l sm:mx-3 sm:hover:bg-transparent sm:hover:text-green-500 xl:text-xl"
+      href="/about">About</a>
+    
+  </div>
+</header>
+
+
+    <div class="self-center">
+      
+
+<div class="px-4">
+
+  <article class="prose xl:prose-xl">
+    <h1 class="text-4xl mt-1 m-0">GitJournal September Update</h1>
+    <h2 class="text-sm"></h2>
+
+    <div class="mt-12">
+      <p>Last month, after much deliberation <strong>I&rsquo;ve decided to start working on GitJournal full-time</strong>, till at least the end of the year. Before this I had been doing a mix of consulting and GitJournal.</p>
+<p>This is a scary big step to take. Getting paid from consulting is so much easier than a product. GitJournal&rsquo;s revenue is still far away from covering my monthly expenses, but I think I can get there by the end of the year.</p>
+<p>I&rsquo;ve also taken another big decission - To be more open and transparent with all parts of GitJournal - especially the revenue and usage statistics. (Partly inspired by <a href="https://plausible.io">Plausible</a>)</p>
+<p><img src="/images/blog/2020/10/sept_cover.jpeg" alt="Sharing the stats"></p>
+<p>GitJournal has always been completely Open Source. But I&rsquo;ve never felt comfortable sharing the buisness side of things - Some part of this is probably cultural, but I think it is mostly because of fear of failure and judgement. Just my engineering skills are not what will make GitJournal successfull. It&rsquo;s just one part of the puzzle, and probably not even the most important one.</p>
+<p>Hopefully, by sharing the real numbers, it&rsquo;ll lead to more transparency, self-motivation and maybe even inspire other <a href="https://www.indiehackers.com/product/gitjournal">Indie Hackers</a> out there. Launching your own product is difficult. And GitJournal is a certainly an outlier as it&rsquo;s both completely <a href="https://github.com/GitJournal/GitJournal/blob/master/LICENSE">Open Source</a> and it&rsquo;s mainly targetting individuals (B2C) and not buisnesses.</p>
+<p>Alright, let&rsquo;s look at the numbers.</p>
+<p>For September my goals were to -</p>
+<ol>
+<li>Reach 500€ in Revenue</li>
+<li>Launch on Hacker News</li>
+</ol>
+<h3 id="revenue">Revenue</h3>
+
+
+
+<div class="chart" class="w-full relative" style="height: 300px">
+  <canvas id="revenue-2020-09"></canvas>
+</div>
+
+<p>As you can see, I&rsquo;ve reached <strong>94.2%</strong> of the revenue goal (<strong>+120.34%</strong>). This is still a good increase from last month, but I thought I would easily reach my goal. Please note that only 30% of this is Monthly Recurring Revenue. And the Yearly Purchase does NOT automatically renew.</p>
+
+
+
+<div class="chart" class="w-full relative" style="height: 300px">
+  <canvas id="revenue-2020-08"></canvas>
+</div>
+
+<p>I did land up launching on <a href="https://news.ycombinator.com/item?id=24627465">Hacker News</a> on the 29th of September, however it barely got any traction, which was disappointing. However, I&rsquo;m still quite please that this forced me to build this website and now I can start some SEO and it will make promoting GitJournal easier.</p>
+<h3 id="usage-stats">Usage Stats</h3>
+<ul>
+<li><strong>DAU:</strong> 222 (<strong>-16.79%</strong>)</li>
+<li><strong>WAU:</strong> 873 (<strong>+4.42%</strong>)</li>
+<li><strong>MAU:</strong> 2400 (<strong>+4.34%</strong>)</li>
+</ul>
+<p>Where an active user is defined as a user who uses the app for more than 10 seconds. These numbers are questionable as the statistics are anonymous and linked to a device. Reinstalling the app will count as a new user. This also makes measuring retention really difficult.</p>
+<p>Additionally, I know many people who have switched off analytics.</p>
+<p>During this month I&rsquo;ll spend some time to create some public dashboards to show the revenue and usage stats. Something similar to <a href="https://baremetrics.com/open-startups">Bare Metrics</a> would be awesome. Please let me know if you have any reccomendations.</p>
+<h2 id="changes">Changes</h2>
+<p>Most of my time this month was spent building the GitJournal website for the Hacker News launch. I&rsquo;ve always been more of backend developer, and CSS is something I&rsquo;ve always struggled with. However this time after using <a href="https://tailwindcss.com/">Tailwind CSS</a>, building the website was much easier.</p>
+<p>It&rsquo;s the first time I&rsquo;ve felt so comfortable building a website. This has resulted in almost doubling the number of unique views per day (Aug - 40 vs Sept - 70).</p>
+<p>An open question is whether I should have spent these <strong>80+ hours</strong> to build the website, instead of contracting it out. My biased opinion is that front-end development is as essential skill that I was lacking. Building this has resulted in my overall design skills improving as well. More about this in another blog post.</p>
+<p>Another big achievement for me was contracting out some graphic design work using Fiverr. I wanted to get into the habit of delegating more tasks, instead of doing everything myself. And this was the first step.</p>
+<p>I&rsquo;m still looking for other designers and trying to improve my own design skills. If you have any suggestions, please let me know.</p>
+<h2 id="october-goals">October Goals</h2>
+<ol>
+<li><strong>Revenue</strong>: 750 €</li>
+<li><strong>Payment via Website:</strong> This is crucial for releasing GitJournal on F-Droid and the Desktop. It should also increase the revenue as for some percentage of the users I will be able to avoid the 30% Google and Apple tax.</li>
+</ol>
+<p>I&rsquo;m specifically not putting any product development goals as building and improving GitJournal comes naturally. I have a huge list of tasks I want to do, but — for me — its better to not set them as goals as I prefer to prioritize issues and features on a weekly basis based on what will increase the revenue, user feedback and <a href="https://github.com/GitJournal/GitJournal/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc">votes</a>.</p>
+<p>Also by just having a revenue goal, I can decide how much I want to focus on  developing newer features to convert more users vs attracting more users.</p>
+<p>What do you think? What would you do differently?</p>
+
+    </div>
+  </article>
+
+  
+<div class="mt-16"></div>
+
+
+<hr class="">
+
+
+<div class="flex flex-row justify-between my-8">
+  
+  
+  
+
+  <a href="https://gitjournal.io/blog/2020-06-12-may-update/" class="text-md font-semibold flex flex-row items-center hover:text-green-500">
+    <svg class="text-current w-8 mr-4 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+      stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+    </svg>
+    GitJournal May Update
+  </a>
+  
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div v-if="!newsletter.success && !newsletter.fail" class="bg-white shadow-lg rounded px-4 py-6">
+
+  <div class="text-lg font-bold">Want product news and updates?</div>
+  <div class="text-sm mt-2">Subscribe to the GitJournal newsletter. Roughly one email a month.</div>
+
+  <form id='gj-newsletter' class="flex flex-wrap md:flex-no-wrap my-4">
+    <input
+      class="appearance-none border rounded py-2 px-3 my-2 w-full md:w-1/3 md:mr-2 leading-tight focus:outline-none focus:shadow-outline"
+      name="name" id='gj-name' type="text" placeholder="First Name">
+    <input
+      class="appearance-none border rounded py-2 px-3 my-2 w-full md:w-2/3 md:flex md:mr-2 leading-tight focus:outline-none focus:shadow-outline"
+      name="email" id='gj-email' type="email" placeholder="Email">
+
+    <button
+      class="bg-green-500 hover:bg-green-700 w-full my-2 md:w-auto md:flex-auto text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
+      type="submit">
+      Subscribe
+    </button>
+  </form>
+</div>
+
+
+<div v-if="newsletter.success" class="px-4 py-6">
+  <div class="text-lg font-bold">Thank you</div>
+  <div class="text-sm mt-2">You have been sent a confirmation email.</div>
+</div>
+
+
+<div v-if="newsletter.fail" class="px-4 py-6">
+  <div class="text-lg font-bold">Failed</div>
+  <div class="text-sm mt-2">
+    &lt;&lt; newsletter.failReason>>
+  </div>
+</div>
+
+
+
+</div>
+
+
+    </div>
+
+    
+
+<footer class="py-12 bg-gray-100 min-w-full mt-16">
+
+  <div class="flex flex-wrap mt-8 px-4 md:flex-no-wrap md:justify-center">
+    
+    <div class="mx-auto py-4 px-4 whitespace-no-wrap md:m-0 md:px-8">
+      <h2 class="text-xl font-medium">GitJournal</h2>
+      <ul class="mt-3">
+        
+        <a class="hover:text-green-500" href="/about" >
+          <li class="my-1">About Us</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="/contribute" >
+          <li class="my-1">Contribute</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="/support" >
+          <li class="my-1">FAQ</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="/privacy" >
+          <li class="my-1">Privacy</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="https://github.com/GitJournal/GitJournal/issues?q=is%3Aissue&#43;is%3Aopen&#43;sort%3Areactions-%2B1-desc" >
+          <li class="my-1">Roadmap</li>
+        </a>
+        
+      </ul>
+    </div>
+    
+    <div class="mx-auto py-4 px-4 whitespace-no-wrap md:m-0 md:px-8">
+      <h2 class="text-xl font-medium">Social</h2>
+      <ul class="mt-3">
+        
+        <a class="hover:text-green-500" href="https://twitter.com/GitJournal_io" >
+          <li class="my-1">Twitter</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="https://discord.gg/abBwyEK" >
+          <li class="my-1">Discord</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="https://reddit.com/r/GitJournal" >
+          <li class="my-1">Reddit</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="https://fosstodon.org/@gitjournal"  rel="me" >
+          <li class="my-1">Mastodon</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="/newsletter" >
+          <li class="my-1">Newsletter</li>
+        </a>
+        
+      </ul>
+    </div>
+    
+    <div class="mx-auto py-4 px-4 whitespace-no-wrap md:m-0 md:px-8">
+      <h2 class="text-xl font-medium">Spread the Word</h2>
+      <ul class="mt-3">
+        
+        <a class="hover:text-green-500" href="https://github.com/GitJournal/GitJournal" >
+          <li class="my-1">Star the Project on GitHub</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="https://alternativeto.net/software/gitjournal/" >
+          <li class="my-1">Like Us on Alternative To</li>
+        </a>
+        
+        <a class="hover:text-green-500" href="https://yourstack.com/products/gitjournal" >
+          <li class="my-1">Stack us on YourStack</li>
+        </a>
+        
+      </ul>
+    </div>
+    
+  </div>
+
+  <div class="mt-12">
+    <div class="text-center my-2">
+      © 2020 Vishesh Handa
+    </div>
+
+    <div class="text-xs text-center">Made with <a class="hover:text-green-500" href="https://gohugo.io/">Hugo</a>, <a
+        class="hover:text-green-500" href="https://tailwindcss.com/">Tailwind</a> and <a class="hover:text-green-500"
+        href="https://gitjournal.io">GitJournal</a></div>
+    <div class="text-xs text-center mt-1">
+      Web Analytics via <a class="hover:text-green-500" href="https://plausible.io/">Plausible.io</a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <script src="https://gitjournal.io/js/main.min.js"></script>
+  
+
+  
+</body>
+
+</html>
