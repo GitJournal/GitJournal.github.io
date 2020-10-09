@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitJournal</title>
+    <link>https://gitjournal.io/docs/general/</link>
+    <description>Recent content on GitJournal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://gitjournal.io/docs/general/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What is Git?</title>
+      <link>https://gitjournal.io/docs/general/what-is-git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/docs/general/what-is-git/</guid>
+      <description>Git can be thought of as a virtual pen drive. Just like with a normal pendrive you can store files in it. However, it comes with a few awesome capabilities. Since it is a virtual pen drive, it can be easily duplicated.
+At this point you might be wondering - How is this different than DropBox or Google Drive? It&amp;rsquo;s quite similar - both DropBox and Git can be used to store files.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -603,5 +603,15 @@ What is Git and why should I care? We all have many different devices. Our notes
       <description>By downloading or using the app, these terms will automatically apply to you – you should make sure therefore that you read them carefully before using the app. You’re not allowed to copy, or modify the app, any part of the app, but not our trademarks in any way. The app itself, and all the trade marks, copyright, database rights and other intellectual property rights related to it, still belong to Vishesh Handa.</description>
     </item>
     
+    <item>
+      <title>What is Git?</title>
+      <link>https://gitjournal.io/docs/general/what-is-git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/docs/general/what-is-git/</guid>
+      <description>Git can be thought of as a virtual pen drive. Just like with a normal pendrive you can store files in it. However, it comes with a few awesome capabilities. Since it is a virtual pen drive, it can be easily duplicated.
+At this point you might be wondering - How is this different than DropBox or Google Drive? It&amp;rsquo;s quite similar - both DropBox and Git can be used to store files.</description>
+    </item>
+    
   </channel>
 </rss>

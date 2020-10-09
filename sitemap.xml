@@ -278,6 +278,10 @@
   </url>
   
   <url>
+    <loc>https://gitjournal.io/docs/general/</loc>
+  </url>
+  
+  <url>
     <loc>https://gitjournal.io/about/</loc>
   </url>
   
@@ -327,6 +331,10 @@
   
   <url>
     <loc>https://gitjournal.io/terms/</loc>
+  </url>
+  
+  <url>
+    <loc>https://gitjournal.io/docs/general/what-is-git/</loc>
   </url>
   
 </urlset>
