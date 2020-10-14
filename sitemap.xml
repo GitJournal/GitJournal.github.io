@@ -283,10 +283,6 @@
   </url>
   
   <url>
-    <loc>https://gitjournal.io/docs/general/</loc>
-  </url>
-  
-  <url>
     <loc>https://gitjournal.io/about/</loc>
   </url>
   
@@ -307,7 +303,7 @@
   </url>
   
   <url>
-    <loc>https://gitjournal.io/docs/apps/foam/</loc>
+    <loc>https://gitjournal.io/docs/app/foam/</loc>
   </url>
   
   <url>
@@ -339,7 +335,7 @@
   </url>
   
   <url>
-    <loc>https://gitjournal.io/docs/general/what-is-git/</loc>
+    <loc>https://gitjournal.io/docs/what-is-git/</loc>
   </url>
   
 </urlset>
