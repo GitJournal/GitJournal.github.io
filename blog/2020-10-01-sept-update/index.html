@@ -379,7 +379,6 @@
 </div>
 
 <script>
-
   function daysInMonth(year, month) {
     return new Date(year, month, 0).getDate();
   }
@@ -533,6 +532,12 @@
       },
     });
   }
+
+  window.addEventListener('load', () => {
+    buildRevenueGraph("2020", "09");
+    buildRevenueGraph("2020", "08");
+    buildRevenueGraph("2020", "07");
+  });
 </script>
 
 <p>As you can see, I&rsquo;ve reached <strong>94.21%</strong> of the revenue goal (<strong>+120.34%</strong>). This is still a good increase from last month, but I thought I would easily reach my goal. Please note that only 30% of this is Monthly Recurring Revenue. And the Yearly Purchase does NOT automatically renew.</p>
@@ -544,7 +549,6 @@
 </div>
 
 <script>
-
   function daysInMonth(year, month) {
     return new Date(year, month, 0).getDate();
   }
@@ -698,6 +702,12 @@
       },
     });
   }
+
+  window.addEventListener('load', () => {
+    buildRevenueGraph("2020", "09");
+    buildRevenueGraph("2020", "08");
+    buildRevenueGraph("2020", "07");
+  });
 </script>
 
 <p>I did land up launching on <a href="https://news.ycombinator.com/item?id=24627465">Hacker News</a> on the 29th of September, however it barely got any traction, which was disappointing. However, I&rsquo;m still quite pleased that this forced me to build this website and now I can start some SEO and it will make promoting GitJournal easier.</p>
