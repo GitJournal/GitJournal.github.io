@@ -17,12 +17,12 @@
       <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://gitjournal.io/blog/2020-11-05-oct-update/</guid>
-      <description>Wow, it&amp;rsquo;s been a crazy month. October just flew by. I&amp;rsquo;ve barely managed to make progress on so many parts. I overall feel like October has been far too messy.
+      <description>Wow, it&amp;rsquo;s been a crazy month. October just flew by. I&amp;rsquo;ve barely managed to make progress on so many parts. I overall feel like October has been far too messy, I&amp;rsquo;m still figuring out the path forward, and I&amp;rsquo;ll share more details soon.
 For October my goals were -
   Revenue: 750 €
   Payment via Website
   Here are the numbers -
-   function daysInMonth(year, month) { return new Date(year, month, 0).getDate(); } async function buildRevenueGraph(year, month) { var elem = document.</description>
+   function daysInMonth(year, month) { return new Date(year, month, 0).</description>
     </item>
     
     <item>
