@@ -607,6 +607,16 @@ Information gathering and usage GitJournal also collects aggregated, anonymous u
     </item>
     
     <item>
+      <title>Reviews</title>
+      <link>https://gitjournal.io/reviews/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/reviews/</guid>
+      <description>Here is a list of amazing people who have written about GitJournal -
+ freeappsforme.com, Nov 2020 Cybernetus.com, May 2019  </description>
+    </item>
+    
+    <item>
       <title>Support</title>
       <link>https://gitjournal.io/support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
