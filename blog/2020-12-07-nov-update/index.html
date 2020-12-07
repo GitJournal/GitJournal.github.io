@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   
-  <title>GitJournal October Update - GitJournal</title>
+  <title>GitJournal November Update - GitJournal</title>
   
 
   
@@ -368,26 +368,17 @@
 <div class="px-4">
 
   <article class="prose xl:prose-xl">
-    <h1 class="text-4xl mt-1 m-0">GitJournal October Update</h1>
+    <h1 class="text-4xl mt-1 m-0">GitJournal November Update</h1>
     <h2 class="text-sm"></h2>
 
     <div class="mt-12">
-      <p>Wow, it&rsquo;s been a crazy month. October just flew by. I&rsquo;ve barely managed to make progress on so many parts. I overall feel like October has been far too messy, I&rsquo;m still figuring out the path forward, and I&rsquo;ll share more details soon.</p>
-<p>For October my goals were -</p>
-<ol>
-<li>
-<p><strong>Revenue</strong>: 750 €</p>
-</li>
-<li>
-<p><strong>Payment via Website</strong></p>
-</li>
-</ol>
-<p>Here are the numbers -</p>
+      <p>The last month has been a month full of Ios bug fixes, some task management and a few breaks (More on this below).</p>
+<p>For November, financially my goal was a revenue of <strong>800€</strong>. This is one of the first months that I&rsquo;ve crossed my revenue target by earning <strong>998.78€</strong>.</p>
 
 
 
 <div class="chart" class="w-full relative" style="height: 300px">
-  <canvas id="revenue-2020-09"></canvas>
+  <canvas id="revenue-2020-11"></canvas>
 </div>
 
 <script>
@@ -725,33 +716,32 @@
   });
 </script>
 
-<p>I reached <strong>687.42</strong>€ and with an extra <strong>11€</strong> as donations makes it about <strong>700</strong>€ (<strong>↑48%</strong>). I might have made it to 750€, but I&rsquo;ve lost a good 80€ to a payment bug in the code, which I still haven&rsquo;t managed to fix.</p>
-<p>Sadly the second goal of the enabling payments via the website still hasn&rsquo;t been finished. I&rsquo;ve now mostly figured out the backend architecture of GitJournal and I&rsquo;ll be rolling out the concept of a &ldquo;<strong>GitJournal Account</strong>&rdquo; early next week.</p>
-<p>The main benefit is that you&rsquo;ll only need to pay once, instead of having to purchase it separately on Android / iOS / Desktop (soon).</p>
-<p><img src="/images/blog/2020/11/devices.jpg" alt="Devices"></p>
-<p>Even though I reached fairly close to my revenue goal, I feel as though this month has been quite bad. Progress has been quite slow (health issues), but at the same time I&rsquo;m thrilled about the revenue growth in a less productive month. This has led to me introspect on how GitJournal as a project is being managed, specifically how I manage my time and energy and decide which tasks to do.</p>
-<p>Most teams operate in sprints. You plan out tasks for a few weeks and then you execute them. This doesn&rsquo;t always work for me. Depending on how my energy levels are that day and how motivated I&rsquo;m feeling I find it easier to do some tasks vs other. I broadly divide these tasks based on three different factors - <strong>Creativity</strong>, <strong>Unknowns</strong> and <strong>Experience</strong>.</p>
-<p><img src="/images/blog/2020/11/oct_cover.jpeg" alt="Task Planning"></p>
-<p>Tasks where little creativity is required, a few unknowns, and in my area of expertise are the easiest. Depending on my energy level and mood I can make myself do other kind of tasks, but this month has been a low energy month and I&rsquo;ve mostly gravitated towards these low-energy tasks.</p>
-<p>These changes are mostly related to one under the hood effort that has already being going on for weeks which is having <a href="https://github.com/GitJournal/dart-git">native Git support</a>. Once I finish this you can expect faster development (more features coming out), the application will be snappier and it will mark a before and after for the stability of GitJournal</p>
-<p>Other important tasks like Documentation, Marketing, and Customer Support have fallen through the cracks.</p>
-<h3 id="november-goals">November Goals</h3>
-<p>I&rsquo;ve decided to focus less on revenue this month, and try to lay a better foundation for future growth.</p>
+<p>This indicates a <strong>45.3%</strong> increase in revenue from October.</p>
+<h2 id="task-management">Task Management</h2>
+<p>One of the other things I started doing in November is making Github be the one place for all the tasks, and making rough <a href="https://github.com/GitJournal/GitJournal/issues?q=is%3Aopen+is%3Aissue+milestone%3A%22Nov+2020%22">roadmaps</a> for each month. Development has always been prioritized based on the number of upvotes (and requests by pro members), however it wasn&rsquo;t clear what features users could expect on a monthly basis.</p>
+<p>Though on a practical basis, the roadmap was far too optimistic and November was spent trying to fix mysterious iOS problems - mostly regarding payments and analytics. This was exhausting, stressful and ended with me just throwing out Firebase Analytics and releasing GitJournal for iOS without any analytics.</p>
+<p>I was hoping to have finished the account management by now, but I haven&rsquo;t managed to make myself do it and it&rsquo;s stressing me out, so I&rsquo;m now going to put it on hold.</p>
+<h2 id="pushing-myself">Pushing Myself</h2>
+<p>I see developing GitJournal split into roughly 3 parts -</p>
 <ol>
-<li><strong>Revenue</strong>: 800 €</li>
-<li>Implement a better task management system</li>
+<li><strong>Product Development</strong> - This includes design, coding, testing and documentation.</li>
+<li><strong>Customer Development</strong> - This includes talking to the users as support and on whatever medium (HackerNews, Twitter) in order to understand them and accordingly drive Product Development.</li>
+<li><strong>Marketting</strong> - The main goal is to promote GitJournal is various channels - Website, SEO, ASO, Twitter, HackerNews - in order for more people to learn about GitJournal and hopefully get converted into paying users.</li>
 </ol>
-<p>I badly need to figure out a better way of assigning tasks, keeping track of them and what to do when a certain task is proving to be too difficult or I just cannot make myself do it. My current approach has been to just try harder. But willpower only works up to a certain point. It&rsquo;s better to have proper systems in place.</p>
-<p>GitJournal is not a small project and it needs better management. I plan to share the processes I decide to use and maybe even try to measure the progress in some way to see if the system is working.</p>
-<p>I would love to hear about any ideas of how to find a flexible systems which take personal energy levels and motivation into account. Especially when you&rsquo;re just a one person team.</p>
+<p>This is a lot to juggle as one person. The coding part of <strong>Product Development</strong> comes to me naturally, but there are still these other parts where I need to concentrate in order for GitJournal to be sustainable. These parts require more motivation, learning and pushing myself into new areas and newer ways of thinking.</p>
+<p>However, I need to slow down.</p>
+<p><img src="/images/blog/2020/12/ralph-ravi-kayden-aECGWofxVkw-unsplash.jpg" alt="Slow Down"></p>
+<p>Over the last month, <a href="https://en.wikipedia.org/wiki/Multiple_sclerosis">a chronic condition</a> I suffer from has flared up, and has sadly affected my hands. I now need to take frequent breaks between sessions of using the keyboard. I&rsquo;m hoping this will heal, but in the meantime, I need to adapt.</p>
+<p>I&rsquo;m going to slow down and prioritize my health. This effectively means for December (and maybe even January), I&rsquo;m going to focus less on Marketing and Customer Development, and focus on the parts that give me the most joy - mostly building GitJournal as a product.</p>
+<p>I&rsquo;ve started experimenting with voice coding solutions, foot pedals, and teaching my left hand to use the mouse, in order to be able to code longer. It&rsquo;s an exhausting journey, but fortunately - as a programmer - I&rsquo;m able to configure my tools and environment quite a bit.</p>
+<p>So, no goals for December. Let me just get accustomed to this new stage of my life.</p>
+<p><img src="/images/blog/2020/12/andrew-neel-cckf4TsHAuw-unsplash.jpg" alt="Slow Down"></p>
 
     </div>
   </article>
 
   
-<div class="my-8 text-gray-900">
-  <a class="hover:text-green-500 underline" href="https://www.reddit.com/r/GitJournal/comments/joo50c/gitjournal_october_update/">Discuss this on Reddit →</a>
-</div>
+<div class="mt-16"></div>
 
 
 <hr class="">
@@ -762,27 +752,16 @@
   
   
 
-  <a href="https://gitjournal.io/blog/2020-10-01-sept-update/" class="text-md font-semibold flex flex-row items-center hover:text-green-500">
+  <a href="https://gitjournal.io/blog/2020-11-05-oct-update/" class="text-md font-semibold flex flex-row items-center hover:text-green-500">
     <svg class="text-current w-8 mr-4 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
       stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
     </svg>
-    GitJournal September Update
+    GitJournal October Update
   </a>
   
 
 
-  
-  
-  
-
-  <a href="https://gitjournal.io/blog/2020-12-07-nov-update/" class="text-md  font-semibold flex flex-row items-center hover:text-green-500">
-    GitJournal November Update
-    <svg class="text-current w-8 ml-4 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-      stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-    </svg>
-  </a>
   
 </div>
 

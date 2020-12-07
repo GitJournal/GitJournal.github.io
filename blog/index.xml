@@ -6,10 +6,21 @@
     <description>Recent content in Blog on GitJournal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://gitjournal.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GitJournal November Update</title>
+      <link>https://gitjournal.io/blog/2020-12-07-nov-update/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/blog/2020-12-07-nov-update/</guid>
+      <description>The last month has been a month full of Ios bug fixes, some task management and a few breaks (More on this below).
+For November, financially my goal was a revenue of 800€. This is one of the first months that I&amp;rsquo;ve crossed my revenue target by earning 998.78€.
+   function daysInMonth(year, month) { return new Date(year, month, 0).getDate(); } async function buildRevenueGraph(year, month) { var elem = document.</description>
+    </item>
     
     <item>
       <title>GitJournal October Update</title>
