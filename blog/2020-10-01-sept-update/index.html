@@ -306,6 +306,8 @@
 
 
 
+
+
 <header class="container mx-auto sm:flex sm:justify-between sm:max-w-3xl xl:max-w-5xl mb-16" x-data="{ menuBarOpen: false }">
   <div class="flex items-center justify-between px-4 py-2" :class="menuBarOpen ? 'shadow-sm' : 'shadow-none'">
     <div class="flex flex-row items-center">
@@ -556,6 +558,9 @@
   }
 
   window.addEventListener('load', () => {
+    buildRevenueGraph("2021", "02");
+    buildRevenueGraph("2021", "01");
+    buildRevenueGraph("2020", "12");
     buildRevenueGraph("2020", "11");
     buildRevenueGraph("2020", "10");
     buildRevenueGraph("2020", "09");
@@ -728,6 +733,9 @@
   }
 
   window.addEventListener('load', () => {
+    buildRevenueGraph("2021", "02");
+    buildRevenueGraph("2021", "01");
+    buildRevenueGraph("2020", "12");
     buildRevenueGraph("2020", "11");
     buildRevenueGraph("2020", "10");
     buildRevenueGraph("2020", "09");
@@ -994,7 +1002,7 @@
 
   <div class="mt-12">
     <div class="text-center my-2">
-      <a class="hover:text-green-500" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">© 2020</a> Vishesh Handa
+      <a class="hover:text-green-500" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">© 2021</a> Vishesh Handa
     </div>
 
     <div class="text-xs text-center">Made with <a class="hover:text-green-500" href="https://gohugo.io/">Hugo</a>, <a

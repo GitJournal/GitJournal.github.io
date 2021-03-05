@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   
-  <title>GitJournal October Update - GitJournal</title>
+  <title>The Last 3 Months - GitJournal</title>
   
 
   
@@ -378,26 +378,16 @@
 <div class="px-4">
 
   <article class="prose xl:prose-xl">
-    <h1 class="text-4xl mt-1 m-0">GitJournal October Update</h1>
+    <h1 class="text-4xl mt-1 m-0">The Last 3 Months</h1>
     <h2 class="text-sm"></h2>
 
     <div class="mt-12">
-      <p>Wow, it&rsquo;s been a crazy month. October just flew by. I&rsquo;ve barely managed to make progress on so many parts. I overall feel like October has been far too messy, I&rsquo;m still figuring out the path forward, and I&rsquo;ll share more details soon.</p>
-<p>For October my goals were -</p>
-<ol>
-<li>
-<p><strong>Revenue</strong>: 750 €</p>
-</li>
-<li>
-<p><strong>Payment via Website</strong></p>
-</li>
-</ol>
-<p>Here are the numbers -</p>
+      <p>Revenue took a bit of a dip in December and recovered in January and is now growing. This is partly because of the <a href="https://developer.apple.com/app-store/small-business-program/">Apple Small Business Program</a>, which reduces the commission paid to them from 30% to 15%. I hope Google provides something simliar as half of the revenue comes from Android.</p>
 
 
 
 <div class="chart" class="w-full relative" style="height: 300px">
-  <canvas id="revenue-2020-09"></canvas>
+  <canvas id="revenue-2020-11"></canvas>
 </div>
 
 <script>
@@ -571,7 +561,7 @@
 
 
 <div class="chart" class="w-full relative" style="height: 300px">
-  <canvas id="revenue-2020-10"></canvas>
+  <canvas id="revenue-2020-12"></canvas>
 </div>
 
 <script>
@@ -741,33 +731,375 @@
   });
 </script>
 
-<p>I reached <strong>687.42</strong>€ and with an extra <strong>11€</strong> as donations makes it about <strong>700</strong>€ (<strong>↑48%</strong>). I might have made it to 750€, but I&rsquo;ve lost a good 80€ to a payment bug in the code, which I still haven&rsquo;t managed to fix.</p>
-<p>Sadly the second goal of the enabling payments via the website still hasn&rsquo;t been finished. I&rsquo;ve now mostly figured out the backend architecture of GitJournal and I&rsquo;ll be rolling out the concept of a &ldquo;<strong>GitJournal Account</strong>&rdquo; early next week.</p>
-<p>The main benefit is that you&rsquo;ll only need to pay once, instead of having to purchase it separately on Android / iOS / Desktop (soon).</p>
-<p><img src="/images/blog/2020/11/devices.jpg" alt="Devices"></p>
-<p>Even though I reached fairly close to my revenue goal, I feel as though this month has been quite bad. Progress has been quite slow (health issues), but at the same time I&rsquo;m thrilled about the revenue growth in a less productive month. This has led to me introspect on how GitJournal as a project is being managed, specifically how I manage my time and energy and decide which tasks to do.</p>
-<p>Most teams operate in sprints. You plan out tasks for a few weeks and then you execute them. This doesn&rsquo;t always work for me. Depending on how my energy levels are that day and how motivated I&rsquo;m feeling I find it easier to do some tasks vs other. I broadly divide these tasks based on three different factors - <strong>Creativity</strong>, <strong>Unknowns</strong> and <strong>Experience</strong>.</p>
-<p><img src="/images/blog/2020/11/oct_cover.jpeg" alt="Task Planning"></p>
-<p>Tasks where little creativity is required, a few unknowns, and in my area of expertise are the easiest. Depending on my energy level and mood I can make myself do other kind of tasks, but this month has been a low energy month and I&rsquo;ve mostly gravitated towards these low-energy tasks.</p>
-<p>These changes are mostly related to one under the hood effort that has already being going on for weeks which is having <a href="https://github.com/GitJournal/dart-git">native Git support</a>. Once I finish this you can expect faster development (more features coming out), the application will be snappier and it will mark a before and after for the stability of GitJournal</p>
-<p>Other important tasks like Documentation, Marketing, and Customer Support have fallen through the cracks.</p>
-<h3 id="november-goals">November Goals</h3>
-<p>I&rsquo;ve decided to focus less on revenue this month, and try to lay a better foundation for future growth.</p>
-<ol>
-<li><strong>Revenue</strong>: 800 €</li>
-<li>Implement a better task management system</li>
-</ol>
-<p>I badly need to figure out a better way of assigning tasks, keeping track of them and what to do when a certain task is proving to be too difficult or I just cannot make myself do it. My current approach has been to just try harder. But willpower only works up to a certain point. It&rsquo;s better to have proper systems in place.</p>
-<p>GitJournal is not a small project and it needs better management. I plan to share the processes I decide to use and maybe even try to measure the progress in some way to see if the system is working.</p>
-<p>I would love to hear about any ideas of how to find a flexible systems which take personal energy levels and motivation into account. Especially when you&rsquo;re just a one person team.</p>
+
+
+
+<div class="chart" class="w-full relative" style="height: 300px">
+  <canvas id="revenue-2021-01"></canvas>
+</div>
+
+<script>
+  function daysInMonth(year, month) {
+    return new Date(year, month, 0).getDate();
+  }
+
+  async function buildRevenueGraph(year, month) {
+    var elem = document.getElementById(`revenue-${year}-${month}`);
+    if (elem == null) {
+      return;
+    }
+    var ctx = elem.getContext("2d");
+    if (ctx == null) {
+      return;
+    }
+
+    var labels = [];
+    for (var i = 1; i <= daysInMonth(year, month); i++) {
+      labels[i - 1] = i;
+    }
+
+    var response = await fetch(`/data/revenue/${year}-${month}.json`);
+    var data = await response.json();
+
+    var revenue = [];
+    var sales = [];
+    var monthly = [];
+    var yearly = [];
+
+    for (var i = 0; i < data.length; i++) {
+      var value = data[i];
+
+      revenue[i] = parseFloat(value.total);
+      sales[i] = parseFloat(value.sales);
+      monthly[i] = parseFloat(value.subscriptions);
+      yearly[i] = parseFloat(value.iap) - parseFloat(value.subscriptions);
+    }
+
+    for (var i = 1; i < revenue.length; i++) {
+      revenue[i] += revenue[i - 1];
+      sales[i] += sales[i - 1];
+      monthly[i] += monthly[i - 1];
+      yearly[i] += yearly[i - 1];
+    }
+
+    const date = new Date(year, month - 1, 1);
+    const monthName = date.toLocaleString("default", { month: "long" });
+
+    var total = 0;
+
+    new Chart(ctx, {
+      type: "line",
+      
+      data: {
+        labels: labels,
+        
+        datasets: [
+          {
+            label: "Monthly Subs",
+            backgroundColor: "#1dab13",
+            
+            data: monthly,
+            pointRadius: 0,
+          },
+          {
+            label: "iOS Sales",
+            backgroundColor: "#87cb74",
+            
+            fill: "origin",
+            data: sales,
+            pointRadius: 0,
+          },
+          {
+            label: "Yearly Purchase",
+            backgroundColor: "#d1eac7",
+            
+            data: yearly,
+            pointRadius: 0,
+          },
+          
+          
+          
+          
+        ],
+      },
+
+      
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: {
+          padding: 10,
+        },
+        tooltips: {
+          mode: "index",
+          intersect: false,
+          callbacks: {
+            afterTitle: function () {
+              total = 0;
+            },
+            label: function (tooltipItem, data) {
+              var label = data.datasets[tooltipItem.datasetIndex].label;
+              var valor =
+                data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+              total += valor;
+              return label + ": " + valor.toFixed(2) + " €";
+            },
+            footer: function () {
+              return "Total: " + total.toFixed(2) + " €";
+            },
+          },
+        },
+        hover: {
+          mode: "index",
+          intersect: true,
+        },
+        legend: {
+          display: true,
+          position: "bottom",
+        },
+        title: {
+          display: true,
+          text: `${monthName} ${year}`,
+        },
+        scales: {
+          yAxes: [
+            {
+              stacked: true,
+              scaleLabel: {
+                display: false,
+              },
+              ticks: {
+                callback: function (value) {
+                  return value + " €";
+                },
+              },
+            },
+          ],
+          xAxes: [
+            {
+              gridLines: {
+                drawOnChartArea: false,
+              },
+              ticks: {
+                userCallback: function (item, index) {
+                  if (!((index + 1) % 5)) return item + "th";
+                },
+                autoSkip: false,
+              },
+            },
+          ],
+        },
+      },
+    });
+  }
+
+  window.addEventListener('load', () => {
+    buildRevenueGraph("2021", "02");
+    buildRevenueGraph("2021", "01");
+    buildRevenueGraph("2020", "12");
+    buildRevenueGraph("2020", "11");
+    buildRevenueGraph("2020", "10");
+    buildRevenueGraph("2020", "09");
+    buildRevenueGraph("2020", "08");
+    buildRevenueGraph("2020", "07");
+  });
+</script>
+
+
+
+
+<div class="chart" class="w-full relative" style="height: 300px">
+  <canvas id="revenue-2021-02"></canvas>
+</div>
+
+<script>
+  function daysInMonth(year, month) {
+    return new Date(year, month, 0).getDate();
+  }
+
+  async function buildRevenueGraph(year, month) {
+    var elem = document.getElementById(`revenue-${year}-${month}`);
+    if (elem == null) {
+      return;
+    }
+    var ctx = elem.getContext("2d");
+    if (ctx == null) {
+      return;
+    }
+
+    var labels = [];
+    for (var i = 1; i <= daysInMonth(year, month); i++) {
+      labels[i - 1] = i;
+    }
+
+    var response = await fetch(`/data/revenue/${year}-${month}.json`);
+    var data = await response.json();
+
+    var revenue = [];
+    var sales = [];
+    var monthly = [];
+    var yearly = [];
+
+    for (var i = 0; i < data.length; i++) {
+      var value = data[i];
+
+      revenue[i] = parseFloat(value.total);
+      sales[i] = parseFloat(value.sales);
+      monthly[i] = parseFloat(value.subscriptions);
+      yearly[i] = parseFloat(value.iap) - parseFloat(value.subscriptions);
+    }
+
+    for (var i = 1; i < revenue.length; i++) {
+      revenue[i] += revenue[i - 1];
+      sales[i] += sales[i - 1];
+      monthly[i] += monthly[i - 1];
+      yearly[i] += yearly[i - 1];
+    }
+
+    const date = new Date(year, month - 1, 1);
+    const monthName = date.toLocaleString("default", { month: "long" });
+
+    var total = 0;
+
+    new Chart(ctx, {
+      type: "line",
+      
+      data: {
+        labels: labels,
+        
+        datasets: [
+          {
+            label: "Monthly Subs",
+            backgroundColor: "#1dab13",
+            
+            data: monthly,
+            pointRadius: 0,
+          },
+          {
+            label: "iOS Sales",
+            backgroundColor: "#87cb74",
+            
+            fill: "origin",
+            data: sales,
+            pointRadius: 0,
+          },
+          {
+            label: "Yearly Purchase",
+            backgroundColor: "#d1eac7",
+            
+            data: yearly,
+            pointRadius: 0,
+          },
+          
+          
+          
+          
+        ],
+      },
+
+      
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: {
+          padding: 10,
+        },
+        tooltips: {
+          mode: "index",
+          intersect: false,
+          callbacks: {
+            afterTitle: function () {
+              total = 0;
+            },
+            label: function (tooltipItem, data) {
+              var label = data.datasets[tooltipItem.datasetIndex].label;
+              var valor =
+                data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+              total += valor;
+              return label + ": " + valor.toFixed(2) + " €";
+            },
+            footer: function () {
+              return "Total: " + total.toFixed(2) + " €";
+            },
+          },
+        },
+        hover: {
+          mode: "index",
+          intersect: true,
+        },
+        legend: {
+          display: true,
+          position: "bottom",
+        },
+        title: {
+          display: true,
+          text: `${monthName} ${year}`,
+        },
+        scales: {
+          yAxes: [
+            {
+              stacked: true,
+              scaleLabel: {
+                display: false,
+              },
+              ticks: {
+                callback: function (value) {
+                  return value + " €";
+                },
+              },
+            },
+          ],
+          xAxes: [
+            {
+              gridLines: {
+                drawOnChartArea: false,
+              },
+              ticks: {
+                userCallback: function (item, index) {
+                  if (!((index + 1) % 5)) return item + "th";
+                },
+                autoSkip: false,
+              },
+            },
+          ],
+        },
+      },
+    });
+  }
+
+  window.addEventListener('load', () => {
+    buildRevenueGraph("2021", "02");
+    buildRevenueGraph("2021", "01");
+    buildRevenueGraph("2020", "12");
+    buildRevenueGraph("2020", "11");
+    buildRevenueGraph("2020", "10");
+    buildRevenueGraph("2020", "09");
+    buildRevenueGraph("2020", "08");
+    buildRevenueGraph("2020", "07");
+  });
+</script>
+
+<p>This is understandable as there was almost no development or marketing effort in December or January. I was taking a break to heal after an injury. In Feb, I&rsquo;ve been back to about 30% of my normal speed. I&rsquo;m not sure when I&rsquo;ll be able to go back to pre-December levels, but it&rsquo;s nice to be slowly getting better.</p>
+<p>Overall there has been a <strong>15.15%</strong> increase in revenue since November.</p>
+<h2 id="steps-ahead">Steps Ahead</h2>
+<p>I&rsquo;ve routinely underestimated how long it would take me to finish tasks, and it&rsquo;s taking me much longer to heal than I anticipated. Therefore, I would prefer to set milestones which I think are far more realistic.</p>
+<h3 id="development">Development</h3>
+<p>I&rsquo;ve created a small <a href="https://github.com/GitJournal/GitJournal/milestone/4">task list</a> for March which I&rsquo;m fairly confident I can accomplish. They also happen to be some of the most voted tasks. So please go ahead and vote on your favorite <a href="https://github.com/GitJournal/GitJournal/issues?page=1&amp;q=is%3Aopen+is%3Aissue+sort%3Areactions-%2B1-desc">issues</a>. It matters.</p>
+<p>There is also a <a href="https://discord.gg/abBwyEK">Discord Server</a> where I share daily technical progress in the <code>#standup</code> channel.</p>
+<h3 id="marketing">Marketing</h3>
+<p>Every couple of hours spent on marketing has a clear impact on revenue. I&rsquo;m going to try at the minimum build a better icon and improve its <a href="https://apps.apple.com/app/gitjournal/id1466519634">app</a> <a href="https://play.google.com/store/apps/details?id=io.gitjournal.gitjournal&amp;pcampaignid=website">pages</a>. A significant portion of new users come from searches in the app stores.</p>
+<h2 id="what-niche">What Niche?</h2>
+<p>My original plan for GitJournal was just a place to store my daily journal entries. I&rsquo;d planned to create a separate app (maybe called GitNotes?) for most of my other note taking. However, GitJournal just kept growing and people started using it in all sort of ways which I had not expected (managing static websites).</p>
+<p><img src="/images/blog/2021/03/white-jigsaw.jpeg" alt="Nice"></p>
+<p>Over the last year, with the explosion of Roam Research, Obsidian and other linked Note taking tools, the entire note taking space has been overturned. The difference between Journaling and Note Taking is now far fuzzier as different parts of them link to one another. Digital notes aren&rsquo;t like notes in a notebook.</p>
+<p>GitJournal, as it currently exists, fits into this space as the mobile and tablet companion to the existing desktop apps. At some point, I might try and release a desktop and web-version, but for now it might be better to focus on the unique value provided by GitJournal.</p>
+<p>Of course, none of this is set in stone.</p>
 
     </div>
   </article>
 
   
-<div class="my-8 text-gray-900">
-  <a class="hover:text-green-500 underline" href="https://www.reddit.com/r/GitJournal/comments/joo50c/gitjournal_october_update/">Discuss this on Reddit →</a>
-</div>
+<div class="mt-16"></div>
 
 
 <hr class="">
@@ -778,27 +1110,16 @@
   
   
 
-  <a href="https://gitjournal.io/blog/2020-10-01-sept-update/" class="text-md font-semibold flex flex-row items-center hover:text-green-500">
+  <a href="https://gitjournal.io/blog/2020-12-07-nov-update/" class="text-md font-semibold flex flex-row items-center hover:text-green-500">
     <svg class="text-current w-8 mr-4 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
       stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
     </svg>
-    GitJournal September Update
-  </a>
-  
-
-
-  
-  
-  
-
-  <a href="https://gitjournal.io/blog/2020-12-07-nov-update/" class="text-md  font-semibold flex flex-row items-center hover:text-green-500">
     GitJournal November Update
-    <svg class="text-current w-8 ml-4 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-      stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-    </svg>
   </a>
+  
+
+
   
 </div>
 

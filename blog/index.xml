@@ -6,10 +6,20 @@
     <description>Recent content in Blog on GitJournal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://gitjournal.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Last 3 Months</title>
+      <link>https://gitjournal.io/blog/2021-03-05-last-3-months/</link>
+      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/blog/2021-03-05-last-3-months/</guid>
+      <description>Revenue took a bit of a dip in December and recovered in January and is now growing. This is partly because of the Apple Small Business Program, which reduces the commission paid to them from 30% to 15%. I hope Google provides something simliar as half of the revenue comes from Android.
+   function daysInMonth(year, month) { return new Date(year, month, 0).getDate(); } async function buildRevenueGraph(year, month) { var elem = document.</description>
+    </item>
     
     <item>
       <title>GitJournal November Update</title>
