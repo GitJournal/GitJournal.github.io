@@ -586,6 +586,21 @@ How to Sync?   Manually - You may use git commands from the terminal or directly
     </item>
     
     <item>
+      <title>Infrastructure</title>
+      <link>https://gitjournal.io/infa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/infa/</guid>
+      <description>Backend Infrastructure -
+ Google Cloud Platform Digital Ocean  Analytics -
+ App: Firebase Analytics Website: Plausible.io  Crashes and Error Handling -
+ Sentry  Source Code -
+ GitHub  Payments -
+ Google Play (mandatory on Android) Apple (mandatory on ios)  Mailing List -
+ Mailerlite  </description>
+    </item>
+    
+    <item>
       <title>Joplin Import</title>
       <link>https://gitjournal.io/docs/import/joplin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
