@@ -308,6 +308,8 @@
 
 
 
+
+
 <header class="container mx-auto sm:flex sm:justify-between sm:max-w-3xl xl:max-w-5xl mb-16" x-data="{ menuBarOpen: false }">
   <div class="flex items-center justify-between px-4 py-2" :class="menuBarOpen ? 'shadow-sm' : 'shadow-none'">
     <div class="flex flex-row items-center">
@@ -386,17 +388,37 @@
 
 
 
-<div class="chart" class="w-full relative" style="height: 300px">
-  <canvas id="revenue-2020-11"></canvas>
+
+<div class="chart" class="w-full relative" style="height: 340px">
+  <canvas id="revenue-bar-2020-11"></canvas>
 </div>
 
 <script>
-  function daysInMonth(year, month) {
-    return new Date(year, month, 0).getDate();
+  function totalStats(data) {
+    var revenue = 0;
+    var sales = 0;
+    var monthly = 0;
+    var yearly = 0;
+
+    for (var i = 0; i < data.length; i++) {
+      var value = data[i];
+
+      revenue += parseFloat(value.total);
+      sales += parseFloat(value.sales);
+      monthly += parseFloat(value.subscriptions);
+      yearly += parseFloat(value.iap) - parseFloat(value.subscriptions);
+    }
+
+    return {
+      revenue: revenue,
+      sales: sales,
+      monthly: monthly,
+      yearly: yearly,
+    };
   }
 
-  async function buildRevenueGraph(year, month) {
-    var elem = document.getElementById(`revenue-${year}-${month}`);
+  async function buildRevenueBarGraph(year0, month0, year1, month1, year2, month2, year3, month3) {
+    var elem = document.getElementById(`revenue-bar-${year0}-${month0}`);
     if (elem == null) {
       return;
     }
@@ -405,68 +427,52 @@
       return;
     }
 
-    var labels = [];
-    for (var i = 1; i <= daysInMonth(year, month); i++) {
-      labels[i - 1] = i;
-    }
+    var labels = [
+      "Nov",
+      "Dec",
+      "Jan",
+      "Feb",
+    ];
 
-    var response = await fetch(`/data/revenue/${year}-${month}.json`);
-    var data = await response.json();
+    
+    var response = await fetch(`/data/revenue/${year0}-${month0}.json`);
+    var data0 = await response.json();
+    var stats0 = totalStats(data0);
 
-    var revenue = [];
-    var sales = [];
-    var monthly = [];
-    var yearly = [];
+    var response = await fetch(`/data/revenue/${year1}-${month1}.json`);
+    var data1 = await response.json();
+    var stats1 = totalStats(data1);
 
-    for (var i = 0; i < data.length; i++) {
-      var value = data[i];
+    var response = await fetch(`/data/revenue/${year2}-${month2}.json`);
+    var data2 = await response.json();
+    var stats2 = totalStats(data2);
 
-      revenue[i] = parseFloat(value.total);
-      sales[i] = parseFloat(value.sales);
-      monthly[i] = parseFloat(value.subscriptions);
-      yearly[i] = parseFloat(value.iap) - parseFloat(value.subscriptions);
-    }
+    var response = await fetch(`/data/revenue/${year3}-${month3}.json`);
+    var data3 = await response.json();
+    var stats3 = totalStats(data3);
 
-    for (var i = 1; i < revenue.length; i++) {
-      revenue[i] += revenue[i - 1];
-      sales[i] += sales[i - 1];
-      monthly[i] += monthly[i - 1];
-      yearly[i] += yearly[i - 1];
-    }
-
-    const date = new Date(year, month - 1, 1);
-    const monthName = date.toLocaleString("default", { month: "long" });
-
-    var total = 0;
+    
+    
 
     new Chart(ctx, {
-      type: "line",
-      
+      type: "bar",
       data: {
         labels: labels,
-        
         datasets: [
           {
-            label: "Monthly Subs",
+            label: "Monthly",
             backgroundColor: "#1dab13",
-            
-            data: monthly,
-            pointRadius: 0,
+            data: [stats0.monthly, stats1.monthly, stats2.monthly, stats3.monthly],
+          },
+          {
+            label: "Yearly",
+            backgroundColor: "#87cb74",
+            data: [stats0.yearly, stats1.yearly, stats2.yearly, stats3.yearly],
           },
           {
             label: "iOS Sales",
-            backgroundColor: "#87cb74",
-            
-            fill: "origin",
-            data: sales,
-            pointRadius: 0,
-          },
-          {
-            label: "Yearly Purchase",
             backgroundColor: "#d1eac7",
-            
-            data: yearly,
-            pointRadius: 0,
+            data: [stats0.sales, stats1.sales, stats2.sales, stats3.sales],
           },
           
           
@@ -511,33 +517,21 @@
         },
         title: {
           display: true,
-          text: `${monthName} ${year}`,
+          text: `Revenue`,
         },
         scales: {
           yAxes: [
             {
               stacked: true,
-              scaleLabel: {
-                display: false,
-              },
-              ticks: {
-                callback: function (value) {
-                  return value + " €";
-                },
-              },
+              
+
             },
           ],
           xAxes: [
             {
-              gridLines: {
-                drawOnChartArea: false,
-              },
-              ticks: {
-                userCallback: function (item, index) {
-                  if (!((index + 1) % 5)) return item + "th";
-                },
-                autoSkip: false,
-              },
+              stacked: true,
+              
+
             },
           ],
         },
@@ -546,536 +540,7 @@
   }
 
   window.addEventListener('load', () => {
-    buildRevenueGraph("2021", "02");
-    buildRevenueGraph("2021", "01");
-    buildRevenueGraph("2020", "12");
-    buildRevenueGraph("2020", "11");
-    buildRevenueGraph("2020", "10");
-    buildRevenueGraph("2020", "09");
-    buildRevenueGraph("2020", "08");
-    buildRevenueGraph("2020", "07");
-  });
-</script>
-
-
-
-
-<div class="chart" class="w-full relative" style="height: 300px">
-  <canvas id="revenue-2020-12"></canvas>
-</div>
-
-<script>
-  function daysInMonth(year, month) {
-    return new Date(year, month, 0).getDate();
-  }
-
-  async function buildRevenueGraph(year, month) {
-    var elem = document.getElementById(`revenue-${year}-${month}`);
-    if (elem == null) {
-      return;
-    }
-    var ctx = elem.getContext("2d");
-    if (ctx == null) {
-      return;
-    }
-
-    var labels = [];
-    for (var i = 1; i <= daysInMonth(year, month); i++) {
-      labels[i - 1] = i;
-    }
-
-    var response = await fetch(`/data/revenue/${year}-${month}.json`);
-    var data = await response.json();
-
-    var revenue = [];
-    var sales = [];
-    var monthly = [];
-    var yearly = [];
-
-    for (var i = 0; i < data.length; i++) {
-      var value = data[i];
-
-      revenue[i] = parseFloat(value.total);
-      sales[i] = parseFloat(value.sales);
-      monthly[i] = parseFloat(value.subscriptions);
-      yearly[i] = parseFloat(value.iap) - parseFloat(value.subscriptions);
-    }
-
-    for (var i = 1; i < revenue.length; i++) {
-      revenue[i] += revenue[i - 1];
-      sales[i] += sales[i - 1];
-      monthly[i] += monthly[i - 1];
-      yearly[i] += yearly[i - 1];
-    }
-
-    const date = new Date(year, month - 1, 1);
-    const monthName = date.toLocaleString("default", { month: "long" });
-
-    var total = 0;
-
-    new Chart(ctx, {
-      type: "line",
-      
-      data: {
-        labels: labels,
-        
-        datasets: [
-          {
-            label: "Monthly Subs",
-            backgroundColor: "#1dab13",
-            
-            data: monthly,
-            pointRadius: 0,
-          },
-          {
-            label: "iOS Sales",
-            backgroundColor: "#87cb74",
-            
-            fill: "origin",
-            data: sales,
-            pointRadius: 0,
-          },
-          {
-            label: "Yearly Purchase",
-            backgroundColor: "#d1eac7",
-            
-            data: yearly,
-            pointRadius: 0,
-          },
-          
-          
-          
-          
-        ],
-      },
-
-      
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        layout: {
-          padding: 10,
-        },
-        tooltips: {
-          mode: "index",
-          intersect: false,
-          callbacks: {
-            afterTitle: function () {
-              total = 0;
-            },
-            label: function (tooltipItem, data) {
-              var label = data.datasets[tooltipItem.datasetIndex].label;
-              var valor =
-                data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
-              total += valor;
-              return label + ": " + valor.toFixed(2) + " €";
-            },
-            footer: function () {
-              return "Total: " + total.toFixed(2) + " €";
-            },
-          },
-        },
-        hover: {
-          mode: "index",
-          intersect: true,
-        },
-        legend: {
-          display: true,
-          position: "bottom",
-        },
-        title: {
-          display: true,
-          text: `${monthName} ${year}`,
-        },
-        scales: {
-          yAxes: [
-            {
-              stacked: true,
-              scaleLabel: {
-                display: false,
-              },
-              ticks: {
-                callback: function (value) {
-                  return value + " €";
-                },
-              },
-            },
-          ],
-          xAxes: [
-            {
-              gridLines: {
-                drawOnChartArea: false,
-              },
-              ticks: {
-                userCallback: function (item, index) {
-                  if (!((index + 1) % 5)) return item + "th";
-                },
-                autoSkip: false,
-              },
-            },
-          ],
-        },
-      },
-    });
-  }
-
-  window.addEventListener('load', () => {
-    buildRevenueGraph("2021", "02");
-    buildRevenueGraph("2021", "01");
-    buildRevenueGraph("2020", "12");
-    buildRevenueGraph("2020", "11");
-    buildRevenueGraph("2020", "10");
-    buildRevenueGraph("2020", "09");
-    buildRevenueGraph("2020", "08");
-    buildRevenueGraph("2020", "07");
-  });
-</script>
-
-
-
-
-<div class="chart" class="w-full relative" style="height: 300px">
-  <canvas id="revenue-2021-01"></canvas>
-</div>
-
-<script>
-  function daysInMonth(year, month) {
-    return new Date(year, month, 0).getDate();
-  }
-
-  async function buildRevenueGraph(year, month) {
-    var elem = document.getElementById(`revenue-${year}-${month}`);
-    if (elem == null) {
-      return;
-    }
-    var ctx = elem.getContext("2d");
-    if (ctx == null) {
-      return;
-    }
-
-    var labels = [];
-    for (var i = 1; i <= daysInMonth(year, month); i++) {
-      labels[i - 1] = i;
-    }
-
-    var response = await fetch(`/data/revenue/${year}-${month}.json`);
-    var data = await response.json();
-
-    var revenue = [];
-    var sales = [];
-    var monthly = [];
-    var yearly = [];
-
-    for (var i = 0; i < data.length; i++) {
-      var value = data[i];
-
-      revenue[i] = parseFloat(value.total);
-      sales[i] = parseFloat(value.sales);
-      monthly[i] = parseFloat(value.subscriptions);
-      yearly[i] = parseFloat(value.iap) - parseFloat(value.subscriptions);
-    }
-
-    for (var i = 1; i < revenue.length; i++) {
-      revenue[i] += revenue[i - 1];
-      sales[i] += sales[i - 1];
-      monthly[i] += monthly[i - 1];
-      yearly[i] += yearly[i - 1];
-    }
-
-    const date = new Date(year, month - 1, 1);
-    const monthName = date.toLocaleString("default", { month: "long" });
-
-    var total = 0;
-
-    new Chart(ctx, {
-      type: "line",
-      
-      data: {
-        labels: labels,
-        
-        datasets: [
-          {
-            label: "Monthly Subs",
-            backgroundColor: "#1dab13",
-            
-            data: monthly,
-            pointRadius: 0,
-          },
-          {
-            label: "iOS Sales",
-            backgroundColor: "#87cb74",
-            
-            fill: "origin",
-            data: sales,
-            pointRadius: 0,
-          },
-          {
-            label: "Yearly Purchase",
-            backgroundColor: "#d1eac7",
-            
-            data: yearly,
-            pointRadius: 0,
-          },
-          
-          
-          
-          
-        ],
-      },
-
-      
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        layout: {
-          padding: 10,
-        },
-        tooltips: {
-          mode: "index",
-          intersect: false,
-          callbacks: {
-            afterTitle: function () {
-              total = 0;
-            },
-            label: function (tooltipItem, data) {
-              var label = data.datasets[tooltipItem.datasetIndex].label;
-              var valor =
-                data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
-              total += valor;
-              return label + ": " + valor.toFixed(2) + " €";
-            },
-            footer: function () {
-              return "Total: " + total.toFixed(2) + " €";
-            },
-          },
-        },
-        hover: {
-          mode: "index",
-          intersect: true,
-        },
-        legend: {
-          display: true,
-          position: "bottom",
-        },
-        title: {
-          display: true,
-          text: `${monthName} ${year}`,
-        },
-        scales: {
-          yAxes: [
-            {
-              stacked: true,
-              scaleLabel: {
-                display: false,
-              },
-              ticks: {
-                callback: function (value) {
-                  return value + " €";
-                },
-              },
-            },
-          ],
-          xAxes: [
-            {
-              gridLines: {
-                drawOnChartArea: false,
-              },
-              ticks: {
-                userCallback: function (item, index) {
-                  if (!((index + 1) % 5)) return item + "th";
-                },
-                autoSkip: false,
-              },
-            },
-          ],
-        },
-      },
-    });
-  }
-
-  window.addEventListener('load', () => {
-    buildRevenueGraph("2021", "02");
-    buildRevenueGraph("2021", "01");
-    buildRevenueGraph("2020", "12");
-    buildRevenueGraph("2020", "11");
-    buildRevenueGraph("2020", "10");
-    buildRevenueGraph("2020", "09");
-    buildRevenueGraph("2020", "08");
-    buildRevenueGraph("2020", "07");
-  });
-</script>
-
-
-
-
-<div class="chart" class="w-full relative" style="height: 300px">
-  <canvas id="revenue-2021-02"></canvas>
-</div>
-
-<script>
-  function daysInMonth(year, month) {
-    return new Date(year, month, 0).getDate();
-  }
-
-  async function buildRevenueGraph(year, month) {
-    var elem = document.getElementById(`revenue-${year}-${month}`);
-    if (elem == null) {
-      return;
-    }
-    var ctx = elem.getContext("2d");
-    if (ctx == null) {
-      return;
-    }
-
-    var labels = [];
-    for (var i = 1; i <= daysInMonth(year, month); i++) {
-      labels[i - 1] = i;
-    }
-
-    var response = await fetch(`/data/revenue/${year}-${month}.json`);
-    var data = await response.json();
-
-    var revenue = [];
-    var sales = [];
-    var monthly = [];
-    var yearly = [];
-
-    for (var i = 0; i < data.length; i++) {
-      var value = data[i];
-
-      revenue[i] = parseFloat(value.total);
-      sales[i] = parseFloat(value.sales);
-      monthly[i] = parseFloat(value.subscriptions);
-      yearly[i] = parseFloat(value.iap) - parseFloat(value.subscriptions);
-    }
-
-    for (var i = 1; i < revenue.length; i++) {
-      revenue[i] += revenue[i - 1];
-      sales[i] += sales[i - 1];
-      monthly[i] += monthly[i - 1];
-      yearly[i] += yearly[i - 1];
-    }
-
-    const date = new Date(year, month - 1, 1);
-    const monthName = date.toLocaleString("default", { month: "long" });
-
-    var total = 0;
-
-    new Chart(ctx, {
-      type: "line",
-      
-      data: {
-        labels: labels,
-        
-        datasets: [
-          {
-            label: "Monthly Subs",
-            backgroundColor: "#1dab13",
-            
-            data: monthly,
-            pointRadius: 0,
-          },
-          {
-            label: "iOS Sales",
-            backgroundColor: "#87cb74",
-            
-            fill: "origin",
-            data: sales,
-            pointRadius: 0,
-          },
-          {
-            label: "Yearly Purchase",
-            backgroundColor: "#d1eac7",
-            
-            data: yearly,
-            pointRadius: 0,
-          },
-          
-          
-          
-          
-        ],
-      },
-
-      
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        layout: {
-          padding: 10,
-        },
-        tooltips: {
-          mode: "index",
-          intersect: false,
-          callbacks: {
-            afterTitle: function () {
-              total = 0;
-            },
-            label: function (tooltipItem, data) {
-              var label = data.datasets[tooltipItem.datasetIndex].label;
-              var valor =
-                data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
-              total += valor;
-              return label + ": " + valor.toFixed(2) + " €";
-            },
-            footer: function () {
-              return "Total: " + total.toFixed(2) + " €";
-            },
-          },
-        },
-        hover: {
-          mode: "index",
-          intersect: true,
-        },
-        legend: {
-          display: true,
-          position: "bottom",
-        },
-        title: {
-          display: true,
-          text: `${monthName} ${year}`,
-        },
-        scales: {
-          yAxes: [
-            {
-              stacked: true,
-              scaleLabel: {
-                display: false,
-              },
-              ticks: {
-                callback: function (value) {
-                  return value + " €";
-                },
-              },
-            },
-          ],
-          xAxes: [
-            {
-              gridLines: {
-                drawOnChartArea: false,
-              },
-              ticks: {
-                userCallback: function (item, index) {
-                  if (!((index + 1) % 5)) return item + "th";
-                },
-                autoSkip: false,
-              },
-            },
-          ],
-        },
-      },
-    });
-  }
-
-  window.addEventListener('load', () => {
-    buildRevenueGraph("2021", "02");
-    buildRevenueGraph("2021", "01");
-    buildRevenueGraph("2020", "12");
-    buildRevenueGraph("2020", "11");
-    buildRevenueGraph("2020", "10");
-    buildRevenueGraph("2020", "09");
-    buildRevenueGraph("2020", "08");
-    buildRevenueGraph("2020", "07");
+    buildRevenueBarGraph("2020", "11", "2020", "12", "2021", "01", "2021", "02");
   });
 </script>
 
@@ -1088,12 +553,13 @@
 <p>There is also a <a href="https://discord.gg/abBwyEK">Discord Server</a> where I share daily technical progress in the <code>#standup</code> channel.</p>
 <h3 id="marketing">Marketing</h3>
 <p>Every couple of hours spent on marketing has a clear impact on revenue. I&rsquo;m going to try at the minimum build a better icon and improve its <a href="https://apps.apple.com/app/gitjournal/id1466519634">app</a> <a href="https://play.google.com/store/apps/details?id=io.gitjournal.gitjournal&amp;pcampaignid=website">pages</a>. A significant portion of new users come from searches in the app stores.</p>
-<h2 id="what-niche">What Niche?</h2>
-<p>My original plan for GitJournal was just a place to store my daily journal entries. I&rsquo;d planned to create a separate app (maybe called GitNotes?) for most of my other note taking. However, GitJournal just kept growing and people started using it in all sort of ways which I had not expected (managing static websites).</p>
-<p><img src="/images/blog/2021/03/white-jigsaw.jpeg" alt="Nice"></p>
-<p>Over the last year, with the explosion of Roam Research, Obsidian and other linked Note taking tools, the entire note taking space has been overturned. The difference between Journaling and Note Taking is now far fuzzier as different parts of them link to one another. Digital notes aren&rsquo;t like notes in a notebook.</p>
-<p>GitJournal, as it currently exists, fits into this space as the mobile and tablet companion to the existing desktop apps. At some point, I might try and release a desktop and web-version, but for now it might be better to focus on the unique value provided by GitJournal.</p>
-<p>Of course, none of this is set in stone.</p>
+<h3 id="support">Support</h3>
+<p>I&rsquo;ve beel slowly going through the entire backlog, and hopefully I can soon adopt a system similar to Inbox Zero. Earlier, I would quite often try to fix the bug as I read the emails. Now I&rsquo;m wearing a different hat while handling support and my priority is to triage bugs and pass them to the developer (me), who will then decide the priority.</p>
+<h3 id="focus">Focus</h3>
+<p>The surprising side effect of it being harder to type, is that I&rsquo;m now far pickier with the tasks I do. Earlier, I would get easily distracted with other tasks - such as trying to build an open source version of &lsquo;x&rsquo; or &lsquo;y&rsquo;, or a better voting system for GitJournal&rsquo;s issues, etc.</p>
+<p><img src="/images/blog/2021/03/courtney-corlew--EnI0H6Wm6s-unsplash.jpg" alt="Hands"></p>
+<p>Now when I&rsquo;m selecting tasks, I&rsquo;m far more aware of my limits and ask myself &ldquo;Will a user see the direct impact of this task?&rdquo;. My guess is that this with a far reduced scope every month is going to be good for GitJournal.</p>
+<p>What do you think?</p>
 
     </div>
   </article>
@@ -1105,7 +571,23 @@
 <hr class="">
 
 
-<div class="mt-12"></div>
+<div class="flex flex-row justify-between my-8">
+  
+  
+  
+
+  <a href="https://gitjournal.io/blog/2020-12-07-nov-update/" class="text-md font-semibold flex flex-row items-center hover:text-green-500">
+    <svg class="text-current w-8 mr-4 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+      stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+    </svg>
+    GitJournal November Update
+  </a>
+  
+
+
+  
+</div>
 
 
 
