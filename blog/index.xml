@@ -17,7 +17,7 @@
       <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://gitjournal.io/blog/2021-03-05-last-3-months/</guid>
-      <description>Revenue took a bit of a dip in December and recovered in January and is now growing. This is partly because of the Apple Small Business Program, which reduces the commission paid to them from 30% to 15%. I hope Google provides something simliar as half of the revenue comes from Android.
+      <description>Revenue took a bit of a dip in December and recovered in January and is now growing. This is partly because of the Apple Small Business Program, which reduces the commission paid to them from 30% to 15%. I hope Google provides something similar as half of the revenue comes from Android.
    function totalStats(data) { var revenue = 0; var sales = 0; var monthly = 0; var yearly = 0; for (var i = 0; i { buildRevenueBarGraph(&#34;</description>
     </item>
     
