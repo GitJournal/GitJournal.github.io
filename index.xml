@@ -6,10 +6,19 @@
     <description>Recent content on GitJournal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Jun 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://gitjournal.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Version 1.77</title>
+      <link>https://gitjournal.io/changelog/1.77/</link>
+      <pubDate>Tue, 29 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/changelog/1.77/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Version 1.76</title>
