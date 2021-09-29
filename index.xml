@@ -687,6 +687,15 @@ Instructions   File -&amp;gt; Export -&amp;gt; Markdown
     </item>
     
     <item>
+      <title>Markdown Syntax</title>
+      <link>https://gitjournal.io/docs/markdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gitjournal.io/docs/markdown/</guid>
+      <description>GitJournal supports the following markdown -</description>
+    </item>
+    
+    <item>
       <title>Newsletter</title>
       <link>https://gitjournal.io/newsletter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
