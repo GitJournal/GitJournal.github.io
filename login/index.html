@@ -19,10 +19,10 @@
   <link rel="stylesheet" href="https://gitjournal.io/styles/main.min.css" media="screen" crossorigin="anonymous">
 
   
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/%20images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/%20images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/%20images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/%20images/favicon/site.webmanifest">
 
   
   <script async defer data-domain="gitjournal.io" src="https://plausible.gitjournal.io/js/index.js"></script>
@@ -30,10 +30,6 @@
   
 
   <script async defer src="/js/chart.min.js"></script>
-
-  <script async defer src="/js/gotrue.js"></script>
-  <script async defer src='/js/supabase.js'></script>
-
   
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@GitJournalApp">
@@ -61,7 +57,7 @@
         <span class="inline-flex px-2" id="form-error-text"></span>
       </div>
     </div>
-    <form class="mt-8" onsubmit="login(); return false">
+    <form class="mt-8" id="login-form">
       <input type="hidden" name="remember" value="true">
       <div class="rounded-md shadow-sm">
         <div>
@@ -114,70 +110,8 @@
   </div>
 </div>
 
-<script>
-  async function login() {
-    var email = document.getElementById("email").value;
-    if (email == "") {
-      
-      return;
-    }
-    var password = document.getElementById("password").value;
-    var remember_me = document.getElementById("remember_me").checked;
 
-    
-
-    const sup = supabase.createClient('https://kokulrmhlfxdwuvcmblj.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzMTM3NDY4OSwiZXhwIjoxOTQ2OTUwNjg5fQ.LvaFM84Q00RKkRTyIDjzZAnkzba30bnRhQZQldj1AfU');
-    const { user, session, error } = await sup.auth.signIn({  email: email,  password: password,});
-    if (error != null) {
-      showError(error.message);
-    } else {
-      console.log('Success! User: ' + JSON.stringify({ user }));
-      console.log('Success! Session: ' + JSON.stringify({ session }));
-      window.location.href = '/account';
-    }
-  }
-
-  function showError(message) {
-    $("#form-error").removeClass('hidden');
-    $("#form-error-text").text(message);
-  }
-
-  function loginGitLab() {
-    var auth = new GoTrue({
-      APIUrl: API_URL,
-      audience: '',
-      setCookie: true,
-    });
-
-    var resp = auth.loginExternalUrl("gitlab");
-    console.log("RESP", resp);
-    window.location.href = resp;
-  }
-
-  function loginGoogle() {
-    var auth = new GoTrue({
-      APIUrl: API_URL,
-      audience: '',
-      setCookie: true,
-    });
-
-    var resp = auth.loginExternalUrl("google");
-    console.log("RESP", resp);
-    window.location.href = resp;
-  }
-
-  function loginGithub() {
-    var auth = new GoTrue({
-      APIUrl: API_URL,
-      audience: '',
-      setCookie: true,
-    });
-
-    var resp = auth.loginExternalUrl("github");
-    console.log("RESP", resp);
-    window.location.href = resp;
-  }
-</script>
+<script src="https://gitjournal.io/js/login.173b108344c564f33551244c26f50d098f38016c3815778d276e720bab8749e8.js"></script>
 
 
 
