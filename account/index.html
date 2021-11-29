@@ -1,1 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>Account - GitJournal</title>
+  
+
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://gitjournal.io/styles/main.min.css" media="screen" crossorigin="anonymous">
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/%20images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/%20images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/%20images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/%20images/favicon/site.webmanifest">
+
+  
+  <script defer data-domain="gitjournal.io" src="https://p.gitjournal.io/js/plausible.js"></script>
+  <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+  
+
+  <script async defer src="/js/chart.min.js"></script>
+  
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@GitJournalApp">
+<meta name="twitter:creator" content="@visheshhanda">
+<meta name="twitter:title" content="Want product news and updates?">
+<meta name="twitter:description" content="Subscribe to the GitJournal newsletter. Roughly one email a month.">
+<meta name="twitter:image" content="/images/logos/bot_newsletter.jpg?foo">
+<meta name="twitter:image:alt" content="GitJournal App Image">
+
+</head>
+
+<body class=''>
+  
+
+
+<div class="min-w-screen bg-gray-200 flex items-center justify-center px-5 py-5">
+  <div class="w-full max-w-3xl">
+    <h1 id="email" class="text-3xl">USER NAME </h1>
+  </div>
+  <div class="w-full max-w-3xl">
+    <div class="-mx-2 md:flex">
+      <div class="w-full md:w-1/3 px-2">
+        <div class="rounded-lg shadow-sm mb-4">
+          <div class="rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden">
+            <div class="px-3 pt-8 pb-10 text-center relative z-10">
+              <h4 class="text-sm uppercase text-gray-500 leading-tight">Users</h4>
+              <h3 class="text-3xl text-gray-700 font-semibold leading-tight my-3">3,682</h3>
+              <p class="text-xs text-green-500 leading-tight">▲ 57.1%</p>
+            </div>
+            <div class="absolute bottom-0 inset-x-0">
+              <canvas id="chart1" height="70"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 px-2">
+        <div class="rounded-lg shadow-sm mb-4">
+          <div class="rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden">
+            <div class="px-3 pt-8 pb-10 text-center relative z-10">
+              <h4 class="text-sm uppercase text-gray-500 leading-tight">Subscribers</h4>
+              <h3 class="text-3xl text-gray-700 font-semibold leading-tight my-3">11,427</h3>
+              <p class="text-xs text-red-500 leading-tight">▼ 42.8%</p>
+            </div>
+            <div class="absolute bottom-0 inset-x-0">
+              <canvas id="chart2" height="70"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 px-2">
+        <div class="rounded-lg shadow-sm mb-4">
+          <div class="rounded-lg bg-white shadow-lg md:shadow-xl relative overflow-hidden">
+            <div class="px-3 pt-8 pb-10 text-center relative z-10">
+              <h4 class="text-sm uppercase text-gray-500 leading-tight">Comments</h4>
+              <h3 class="text-3xl text-gray-700 font-semibold leading-tight my-3">8,028</h3>
+              <p class="text-xs text-green-500 leading-tight">▲ 8.2%</p>
+            </div>
+            <div class="absolute bottom-0 inset-x-0">
+              <canvas id="chart3" height="70"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="app" class="flex flex-col">
+  <div class="py-12">
+    <h1 class="text-3xl text-center">Issues</h1>
+  </div>
+
+  <ol>
+    <li v-for="issue in issues.list" :key="issue.num"
+      class="flex flex-col justify-center px-2 py-1 hover:bg-gray-200 border-gray-200 border-t-2 border-b-2">
+      <div class="flex flex-row items-center justify-between">
+        <h1 class="font-semibold text-lg">
+          &lt;&lt; issue.title>>
+        </h1>
+        <div class="shadow rounded-lg bg-green-300 flex flex-row items-center px-2 py-1">
+          <span class="font-bold px-1">
+            &lt;&lt; issue.votes>>
+          </span>
+          <svg class="text-current h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </div>
+      </div>
+      <div>
+        <a :href="'https://github.com/GitJournal/GitJournal/issues/' + issue.num">#&lt;&lt; issue.num>> </a>
+        opened on 14 May
+      </div>
+    </li>
+
+  </ol>
+
+  
+  
+</div>
+
+
+<script>
+  window.addEventListener("load", async () => {
+    const sup = supabase.createClient('https://kokulrmhlfxdwuvcmblj.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzMTM3NDY4OSwiZXhwIjoxOTQ2OTUwNjg5fQ.LvaFM84Q00RKkRTyIDjzZAnkzba30bnRhQZQldj1AfU');
+    const user = await sup.auth.user();
+    console.log(user);
+    
+    if (user == null) {
+      return;
+    }
+    console.log("Got User: ", user);
+
+    $("#email").text(user.email);
+
+    chartShit();
+  });
+
+  function parseUrlHashParameters() {
+    var hash = window.location.hash.substr(1);
+
+    var result = hash.split('&').reduce(function (result, item) {
+      var parts = item.split('=');
+      result[parts[0]] = parts[1];
+      return result;
+    }, {});
+    return result;
+  }
+
+  function chartShit() {
+    const chartOptions = {
+      maintainAspectRatio: false,
+      legend: {
+        display: false,
+      },
+      tooltips: {
+        enabled: false,
+      },
+      elements: {
+        point: {
+          radius: 0
+        },
+      },
+      scales: {
+        xAxes: [{
+          gridLines: false,
+          scaleLabel: false,
+          ticks: {
+            display: false
+          }
+        }],
+        yAxes: [{
+          gridLines: false,
+          scaleLabel: false,
+          ticks: {
+            display: false,
+            suggestedMin: 0,
+            suggestedMax: 10
+          }
+        }]
+      }
+    };
+    
+    var ctx = document.getElementById('chart1').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: [1, 2, 1, 3, 5, 4, 7],
+        datasets: [
+          {
+            backgroundColor: "rgba(101, 116, 205, 0.1)",
+            borderColor: "rgba(101, 116, 205, 0.8)",
+            borderWidth: 2,
+            data: [1, 2, 1, 3, 5, 4, 7],
+          },
+        ],
+      },
+      options: chartOptions
+    });
+    
+    var ctx = document.getElementById('chart2').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: [2, 3, 2, 9, 7, 7, 4],
+        datasets: [
+          {
+            backgroundColor: "rgba(246, 109, 155, 0.1)",
+            borderColor: "rgba(246, 109, 155, 0.8)",
+            borderWidth: 2,
+            data: [2, 3, 2, 9, 7, 7, 4],
+          },
+        ],
+      },
+      options: chartOptions
+    });
+    
+    var ctx = document.getElementById('chart3').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: [2, 5, 1, 3, 2, 6, 7],
+        datasets: [
+          {
+            backgroundColor: "rgba(246, 153, 63, 0.1)",
+            borderColor: "rgba(246, 153, 63, 0.8)",
+            borderWidth: 2,
+            data: [2, 5, 1, 3, 2, 6, 7],
+          },
+        ],
+      },
+      options: chartOptions
+    });
+  }
+</script>
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <script src="https://gitjournal.io/js/main.min.js"></script>
+  
+</body>
+
+</html>
