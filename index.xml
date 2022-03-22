@@ -646,18 +646,6 @@ Or scan the following QR code -</description>
     </item>
     
     <item>
-      <title>Foam</title>
-      <link>https://gitjournal.io/docs/app/foam/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gitjournal.io/docs/app/foam/</guid>
-      <description>You can easily use GitJournal on your mobile / tablet, along with Foam on the desktop. In fact Foam recommends GitJournal as the recommended mobile app. Both projects are in contact with each other to ensure they work well together.
-+
-How to Sync?   Manually - You may use git commands from the terminal or directly from within Foam.
-  Automatically - You can install git-auto-sync in order to monitor certain folders and automatically commit and push the changes.</description>
-    </item>
-    
-    <item>
       <title>Infrastructure</title>
       <link>https://gitjournal.io/infra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

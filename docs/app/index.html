@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   
-  <title>Version 1.68 - GitJournal</title>
+  <title>Apps - GitJournal</title>
   
 
   
@@ -419,295 +419,28 @@
     <div class="self-center">
       
 
+<article class="prose xl:prose-xl px-4">
+  <h1 class="text-4xl mt-1 m-0">Apps</h1>
 
+  <div class="mt-12">
+    <h2 class="text-2xl mt-1 m-0">General</h1>
 
-<div class="px-4">
+    <ul class="mx-4 mt-4">
+      <li>
+          <a href="/docs/what-is-git">What is Git</a>
+      </li>
+      <li>
+      <a href="/docs/links">Linking between Notes</a>
 
-  <article class="prose xl:prose-xl">
-    <h1>Version 1.68</h1>
-    <h4>2020-08-31</h4>
+    </li>
 
-    
-    <h2 class="text-xl mt-16">Features</h2>
-    <ul>
-  
-  <li>
-    <h3>
-      One Time Purchase
-    </h3>
-    <p>
-      I'm changing the business model from typical subscriptions to a model where you forever own the features you have paid for. The earlier monthly subscription is still available, but that will automatically convert into a One Time Purchase after 12 months.
-    </p>
-
-    
-    
-    <div class="pb-1">
-      <img class="w-4/5 md:w-1/2 mx-auto rounded shadow-xs" src="/images/releases/1.68/new_pro.gif" alt="">
-    </div>
-    
-  </li>
-  
-  <li>
-    <h3>
-      Zettelkasten filename format
-    </h3>
-    <p>
-      Allow notes to be saved with the 'yyyymmddmmhhss' format
-    </p>
-
-    
-  </li>
-  
-</ul>
-
-    
-
-
-    
-    <h2 class="text-xl mt-16">Improvements</h2>
-    <ul>
-  
-  <li>
-    <h3>
-      Make Swipe to delete configurable
-    </h3>
-    <p>
-      Apparently, many users hate it and accidentally trigger it quite often.
-    </p>
-
-    
-  </li>
-  
-  <li>
-    <h3>
-      Allow Markdown to be previewd from all Editors
-    </h3>
-    <p>
-      All of GitJournal's editors are compatible and operate on the same markdown file. Earlier you could only preview the rendered markdown when with the Markdown Editor.
-    </p>
-
-    
-  </li>
-  
-  <li>
-    <h3>
-      Git Host Automatic Setup
-    </h3>
-    <p>
-      Make it clearer that GitJournal will require permissions to all your repos
-    </p>
-
-    
-    
-    <div class="pb-1">
-      <img class="w-4/5 md:w-1/2 mx-auto rounded shadow-xs" src="/images/releases/1.68/oauth_perm_screen.jpeg" alt="">
-    </div>
-    
-  </li>
-  
-  <li>
-    <h3>
-      
-    </h3>
-    <p>
-      Beautify the purchase slider
-    </p>
-
-    
-  </li>
-  
-  <li>
-    <h3>
-      
-    </h3>
-    <p>
-      Allow `tags` to be a space separated string in the YAML header. Earlier it had to be list.
-    </p>
-
-    
-  </li>
-  
-  <li>
-    <h3>
-      
-    </h3>
-    <p>
-      Show `Pro mode` label in AppBar for pro members
-    </p>
-
-    
-    
-    <div class="pb-1">
-      <img class="w-4/5 md:w-1/2 mx-auto rounded shadow-xs" src="/images/releases/1.68/pro_tag.jpeg" alt="">
-    </div>
-    
-  </li>
-  
-</ul>
-
-    
-
-
-    
-    <h2 class="text-xl mt-16">Bug Fixes</h2>
-    <ul>
-  
-  <li>
-    <h3>
-      Preserve Note title format
-    </h3>
-    <p>
-      Regardless of the settings, the note title should be saved in the same way it was read. Eg - If it was in the YAML metadata, it should be saved there.
-    </p>
-
-    
-  </li>
-  
-</ul>
-
-    
-
-  </article>
-
-  
-<div class="mt-16"></div>
-
-
-<hr class="">
-
-
-<div class="flex flex-row justify-between my-8">
-  
-  
-  
-
-  <a href="https://gitjournal.io/changelog/1.66/" class="text-md font-semibold flex flex-row items-center hover:text-green-500">
-    <svg class="text-current w-8 mr-4 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-      stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
-    </svg>
-    Version 1.66
-  </a>
-  
+    </ul>
+  </div>
 
 
   
-  
-  
 
-  <a href="https://gitjournal.io/changelog/1.69/" class="text-md  font-semibold flex flex-row items-center hover:text-green-500">
-    Version 1.69
-    <svg class="text-current w-8 ml-4 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-      stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-    </svg>
-  </a>
-  
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div x-data="getNewsletter()" @submit.prevent="submitNewsletter();">
-  <template x-if="!newsletter.success && !newsletter.fail" class="bg-white shadow-lg rounded px-4 py-6">
-    <div>
-      <div class="text-lg font-bold">Want product news and updates?</div>
-      <div class="text-sm mt-2">Subscribe to the GitJournal newsletter. Roughly one email a month.</div>
-
-      <form class="flex flex-wrap md:flex-no-wrap my-4">
-        <input
-          class="appearance-none border rounded py-2 px-3 my-2 w-full md:w-1/3 md:mr-2 leading-tight focus:outline-none focus:shadow-outline"
-          x-model="newsletter.name" type="text" placeholder="First Name">
-        <input
-          class="appearance-none border rounded py-2 px-3 my-2 w-full md:w-2/3 md:flex md:mr-2 leading-tight focus:outline-none focus:shadow-outline"
-          x-model="newsletter.email" type="email" placeholder="Email">
-
-        <button
-          class="bg-green-500 hover:bg-green-700 w-full my-2 md:w-auto md:flex-auto text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
-          type="submit">
-          Subscribe
-        </button>
-      </form>
-    </div>
-  </template>
-
-  <template x-if="newsletter.success" class="px-4 py-6">
-    <div>
-      <div class="text-lg font-bold">Thank you</div>
-      <div class="text-sm mt-2">You have been sent a confirmation email.</div>
-    </div>
-  </template>
-
-
-  <template x-if="newsletter.fail" class="px-4 py-6">
-    <div>
-      <div class="text-lg font-bold">Failed</div>
-      <div class="text-sm mt-2">
-        <span x-text="failReason"></span>
-      </div>
-    </div>
-  </template>
-
-</div>
-
-<script>
-  function getNewsletter() {
-    return {
-      newsletter: {
-        fail: false,
-        failReason: "Pokemon are not alive",
-        success: false,
-        name: '',
-        email: '',
-      },
-
-      submitNewsletter: function () {
-        const XHR = new XMLHttpRequest();
-        var n = this.newsletter;
-        const name = n.name;
-        const email = n.email;
-
-        XHR.addEventListener("load", function () {
-          if (XHR.status == 200) {
-            n.success = true;
-          } else {
-            n.fail = true;
-            n.failReason = XHR.responseText;
-          }
-        });
-        XHR.addEventListener("error", function () {
-          n.fail = true;
-          n.failReason = "Unknown Error";
-        });
-
-        XHR.open(
-          "POST",
-          "https://us-central1-gitjournal-io.cloudfunctions.net/NewsletterAdd"
-        );
-        XHR.setRequestHeader("Content-Type", "application/json");
-        XHR.send(JSON.stringify({ name: name, email: email }));
-
-        
-        return false;
-      }
-    };
-  }
-</script>
-
-
-
-</div>
+</article>
 
 
     </div>
